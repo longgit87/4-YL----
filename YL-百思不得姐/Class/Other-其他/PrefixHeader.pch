@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  YL-百思不得姐
+//
+//  Created by 陈亚龙 on 15/9/1.
+//  Copyright (c) 2015年 www.xm.com. All rights reserved.
+//
+
+#ifndef YL_______PrefixHeader_pch
+#define YL_______PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import "UIBarButtonItem+EXT.h"
+#import "YLNavigationControl.h"
+#import "UIView+Frame.h"
+
+//日志输出
+#ifdef DEBUG//开发阶段-DEBUG阶段使用log
+#define YLLog(...) NSLog(__VA_ARGS__)
+#else//发布阶段-上线阶段:移除log
+#define YLLog(...)
+
+
+#endif
+//方法输出
+#define YLLogFunc YLLog(@"%s",__func__)
+//颜色
+#define YLARGBColor(a,r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:(a)/255.0];
+#define YLColor(r,g,b) YLARGBColor(255,(r),(g),(b))
+#define YLGrayColor(v) YLColor((v),(v),(v))
+#define YLCommonBgColor YLGrayColor(206)
+
+#endif
