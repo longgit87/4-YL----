@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YLLoginRegisterViewController">
             <connections>
-                <outlet property="loginLeftView" destination="Hxp-Nn-eYI" id="q5A-rK-GVc"/>
+                <outlet property="loginLeftView" destination="0iC-ol-cIg" id="Jwt-Bo-qFi"/>
                 <outlet property="loginRegister" destination="xqv-1t-Wd2" id="enl-Cl-rza"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -42,6 +42,9 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="注册帐号">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" title="已有帐号">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="loginRegisterClick:" destination="-1" eventType="touchUpInside" id="OiO-b0-jHv"/>
@@ -359,7 +362,6 @@
                 <constraint firstItem="ZOK-Ts-zv1" firstAttribute="top" secondItem="aad-DY-VeS" secondAttribute="top" id="9GA-zh-Y9K"/>
                 <constraint firstItem="xqv-1t-Wd2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="ALD-RB-P3j"/>
                 <constraint firstItem="pDF-vc-fpa" firstAttribute="top" secondItem="xqv-1t-Wd2" secondAttribute="top" id="FOe-Jd-oFb"/>
-                <constraint firstItem="ZOK-Ts-zv1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hxp-Nn-eYI"/>
                 <constraint firstItem="pDF-vc-fpa" firstAttribute="centerY" secondItem="xqv-1t-Wd2" secondAttribute="centerY" id="JyV-13-I8G"/>
                 <constraint firstAttribute="trailing" secondItem="xqv-1t-Wd2" secondAttribute="trailing" constant="20" id="Kig-D6-dIs"/>
                 <constraint firstItem="Lge-Xh-a8Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ROt-og-ni3"/>
@@ -370,9 +372,8 @@
                 <constraint firstAttribute="trailing" secondItem="Lge-Xh-a8Z" secondAttribute="trailing" id="oCr-Il-Eyn"/>
                 <constraint firstItem="pDF-vc-fpa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="tv3-qb-oSd"/>
                 <constraint firstItem="Lge-Xh-a8Z" firstAttribute="top" secondItem="ZOK-Ts-zv1" secondAttribute="bottom" constant="-315" id="uSV-nM-M4Q"/>
-                <constraint firstAttribute="trailing" secondItem="ZOK-Ts-zv1" secondAttribute="trailing" id="uun-EE-j5A"/>
                 <constraint firstItem="Lge-Xh-a8Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vMM-We-kdg"/>
-                <constraint firstAttribute="trailing" secondItem="ZOK-Ts-zv1" secondAttribute="trailing" id="zCN-ao-Jzs"/>
+                <constraint firstItem="ZOK-Ts-zv1" firstAttribute="width" secondItem="Lge-Xh-a8Z" secondAttribute="width" id="ypP-0H-uRo"/>
             </constraints>
             <point key="canvasLocation" x="371" y="247"/>
         </view>

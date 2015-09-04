@@ -13,6 +13,8 @@
 		8A5754FE1B9816E100F6F98D /* YLQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5754FD1B9816E100F6F98D /* YLQuickLoginButton.m */; };
 		8A5755011B981A3C00F6F98D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5755001B981A3C00F6F98D /* UIView+Frame.m */; };
 		8A5755041B984D9C00F6F98D /* YLLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5755031B984D9C00F6F98D /* YLLoginRegisterTextField.m */; };
+		8A5755391B997FA900F6F98D /* YLGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5755381B997FA900F6F98D /* YLGuideView.m */; };
+		8A57553B1B997FC300F6F98D /* YLGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A57553A1B997FC300F6F98D /* YLGuideView.xib */; };
 		8AB74F801B9551F900B5DAF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB74F7F1B9551F900B5DAF1 /* Images.xcassets */; };
 		8AB74F8F1B9551F900B5DAF1 /* YL______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74F8E1B9551F900B5DAF1 /* YL______Tests.m */; };
 		8AB74FE61B96BA7200B5DAF1 /* YLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FBE1B96BA7200B5DAF1 /* YLEssenceViewController.m */; };
@@ -50,6 +52,9 @@
 		8A5755001B981A3C00F6F98D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		8A5755021B984D9C00F6F98D /* YLLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLoginRegisterTextField.h; sourceTree = "<group>"; };
 		8A5755031B984D9C00F6F98D /* YLLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLoginRegisterTextField.m; sourceTree = "<group>"; };
+		8A5755371B997FA900F6F98D /* YLGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YLGuideView.h; path = "../../FriendTrends-关注/View/YLGuideView.h"; sourceTree = "<group>"; };
+		8A5755381B997FA900F6F98D /* YLGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YLGuideView.m; path = "../../FriendTrends-关注/View/YLGuideView.m"; sourceTree = "<group>"; };
+		8A57553A1B997FC300F6F98D /* YLGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YLGuideView.xib; path = "../../FriendTrends-关注/View/YLGuideView.xib"; sourceTree = "<group>"; };
 		8AB74F6F1B9551F900B5DAF1 /* YL-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YL-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB74F731B9551F900B5DAF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB74F7F1B9551F900B5DAF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -103,6 +108,7 @@
 		8AB74F661B9551F900B5DAF1 = {
 			isa = PBXGroup;
 			children = (
+				8AB74FBA1B96BA7200B5DAF1 /* Class */,
 				8AB74F711B9551F900B5DAF1 /* YL-百思不得姐 */,
 				8AB74F8B1B9551F900B5DAF1 /* YL-百思不得姐Tests */,
 				8AB74F701B9551F900B5DAF1 /* Products */,
@@ -121,7 +127,6 @@
 		8AB74F711B9551F900B5DAF1 /* YL-百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				8AB74FBA1B96BA7200B5DAF1 /* Class */,
 				8AB74F721B9551F900B5DAF1 /* Supporting Files */,
 			);
 			path = "YL-百思不得姐";
@@ -162,7 +167,8 @@
 				8AB74FD11B96BA7200B5DAF1 /* New-新帖 */,
 				8AB74FD71B96BA7200B5DAF1 /* Other-其他 */,
 			);
-			path = Class;
+			name = Class;
+			path = "YL-百思不得姐/Class";
 			sourceTree = "<group>";
 		};
 		8AB74FBB1B96BA7200B5DAF1 /* Essence-精华 */ = {
@@ -358,6 +364,9 @@
 		8AB74FE51B96BA7200B5DAF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A5755371B997FA900F6F98D /* YLGuideView.h */,
+				8A5755381B997FA900F6F98D /* YLGuideView.m */,
+				8A57553A1B997FC300F6F98D /* YLGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +454,7 @@
 			files = (
 				8A50532C1B974D61006AC6AF /* YLFriendTrendsViewController.xib in Resources */,
 				8A5053311B9756D6006AC6AF /* YLLoginRegisterViewController.xib in Resources */,
+				8A57553B1B997FC300F6F98D /* YLGuideView.xib in Resources */,
 				8AB74F801B9551F900B5DAF1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +481,7 @@
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
 				8AB74FED1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m in Sources */,
 				8AB74FEF1B96BA7200B5DAF1 /* YLTabBarController.m in Sources */,
+				8A5755391B997FA900F6F98D /* YLGuideView.m in Sources */,
 				8AB74FE71B96BA7200B5DAF1 /* YLTagViewControl.m in Sources */,
 				8AB74FE91B96BA7200B5DAF1 /* YLMeViewController.m in Sources */,
 				8AB74FE61B96BA7200B5DAF1 /* YLEssenceViewController.m in Sources */,

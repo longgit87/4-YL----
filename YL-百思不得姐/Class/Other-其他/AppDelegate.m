@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YLTabBarController.h"
+#import "YLGuideView.h"
 
 @interface AppDelegate ()
 
@@ -18,14 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    //设置窗口frame
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
+    //设置窗口根控制器
     self.window.rootViewController = [[YLTabBarController alloc]init];
     
+    //显示窗口
     [self.window makeKeyAndVisible];
     
-    
-    
+    //显示引导页
+    [YLGuideView show];
+   
     
     return YES;
 }

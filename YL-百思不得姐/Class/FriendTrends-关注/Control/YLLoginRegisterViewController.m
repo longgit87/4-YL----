@@ -42,10 +42,31 @@
     [self.view endEditing:YES];
 }
 //点击注册登录按钮
-- (IBAction)loginRegisterClick:(id)sender {
+- (IBAction)loginRegisterClick:(UIButton *)sender {
     
-    self.loginLeftView.constant = -self.view.width;
-//    [self.view layoutIfNeeded];
+    if (self.loginLeftView.constant == 0) {//约束为0，也就是此时在登录界面
+        
+        self.loginLeftView.constant = -self.view.width;
+        sender.selected = YES;
+        
+
+    }else{
+    
+        //不是0那就是在注册页面，就设置为0，让他回原来的位置
+
+        self.loginLeftView.constant = 0;
+        //让文字改变
+        sender.selected = NO;
+    
+    }
+    //让登录界面右移有动画效果
+    [UIView animateWithDuration:0.5 animations:^{
+        
+        [self.view layoutIfNeeded];
+        
+    }];
+
+    
     
 }
 @end
