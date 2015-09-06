@@ -12,7 +12,8 @@
 #import <UIKit/UIKit.h>
 #import "UIBarButtonItem+EXT.h"
 #import "YLNavigationControl.h"
-#import "UIView+Frame.h"
+#import "UIView+YLFrame.h"
+
 
 //日志输出
 #ifdef DEBUG//开发阶段-DEBUG阶段使用log

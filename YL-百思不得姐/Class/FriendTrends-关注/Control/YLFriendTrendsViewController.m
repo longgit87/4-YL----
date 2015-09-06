@@ -44,14 +44,5 @@
     [self.navigationController pushViewController:tvc animated:YES];
 
 }
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    UIViewController *vc = [[UIViewController alloc]init];
-//    vc.view.backgroundColor = [UIColor redColor];
-//    
-//    [self.navigationController pushViewController:vc animated:YES];
-//
-//
-//}
 
 @end

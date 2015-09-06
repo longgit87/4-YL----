@@ -124,22 +124,24 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="PO9-cX-52k" firstAttribute="leading" secondItem="pvF-BR-HLa" secondAttribute="trailing" id="1dh-V2-cMr"/>
-                        <constraint firstItem="5VS-pg-6aY" firstAttribute="width" secondItem="pvF-BR-HLa" secondAttribute="width" id="2th-mr-atm"/>
-                        <constraint firstAttribute="bottom" secondItem="pvF-BR-HLa" secondAttribute="bottom" id="8Do-WE-9hd"/>
-                        <constraint firstItem="5VS-pg-6aY" firstAttribute="leading" secondItem="PO9-cX-52k" secondAttribute="trailing" id="EU1-u6-sxw"/>
-                        <constraint firstItem="pvF-BR-HLa" firstAttribute="top" secondItem="02U-g3-NHV" secondAttribute="bottom" id="Ft0-J2-Xnr"/>
-                        <constraint firstAttribute="trailing" secondItem="5VS-pg-6aY" secondAttribute="trailing" id="Htv-hc-gq2"/>
-                        <constraint firstItem="5VS-pg-6aY" firstAttribute="width" secondItem="PO9-cX-52k" secondAttribute="width" id="RVf-QD-aUW"/>
-                        <constraint firstItem="PO9-cX-52k" firstAttribute="top" secondItem="02U-g3-NHV" secondAttribute="bottom" id="UZX-ic-lHj"/>
-                        <constraint firstItem="pvF-BR-HLa" firstAttribute="leading" secondItem="GWk-9J-NXY" secondAttribute="leading" id="V1h-Cv-FXQ"/>
-                        <constraint firstItem="5VS-pg-6aY" firstAttribute="top" secondItem="02U-g3-NHV" secondAttribute="bottom" id="ZNk-gw-Q0L"/>
-                        <constraint firstAttribute="bottom" secondItem="PO9-cX-52k" secondAttribute="bottom" id="bt8-Ln-hhT"/>
+                        <constraint firstAttribute="bottom" secondItem="PO9-cX-52k" secondAttribute="bottom" id="3QJ-2b-Gsg"/>
+                        <constraint firstItem="5VS-pg-6aY" firstAttribute="height" secondItem="pvF-BR-HLa" secondAttribute="height" id="7vn-2b-yA6"/>
+                        <constraint firstItem="PO9-cX-52k" firstAttribute="leading" secondItem="pvF-BR-HLa" secondAttribute="trailing" id="AV4-6B-P9F"/>
+                        <constraint firstItem="pvF-BR-HLa" firstAttribute="top" secondItem="02U-g3-NHV" secondAttribute="bottom" id="B8d-UJ-DEa"/>
+                        <constraint firstItem="pvF-BR-HLa" firstAttribute="leading" secondItem="GWk-9J-NXY" secondAttribute="leading" id="IMu-pN-4wG"/>
+                        <constraint firstItem="5VS-pg-6aY" firstAttribute="top" secondItem="02U-g3-NHV" secondAttribute="bottom" id="Ow7-Vf-1nj"/>
+                        <constraint firstAttribute="bottom" secondItem="5VS-pg-6aY" secondAttribute="bottom" id="UZL-V5-1v7"/>
+                        <constraint firstItem="5VS-pg-6aY" firstAttribute="width" secondItem="PO9-cX-52k" secondAttribute="width" id="Y2v-f0-dyG"/>
+                        <constraint firstItem="PO9-cX-52k" firstAttribute="top" secondItem="02U-g3-NHV" secondAttribute="bottom" id="b0P-PF-ByJ"/>
+                        <constraint firstItem="5VS-pg-6aY" firstAttribute="leading" secondItem="PO9-cX-52k" secondAttribute="trailing" id="bDe-K5-nOl"/>
+                        <constraint firstItem="5VS-pg-6aY" firstAttribute="width" secondItem="pvF-BR-HLa" secondAttribute="width" id="bQT-i7-vox"/>
                         <constraint firstAttribute="height" constant="149" id="btN-CK-GcB"/>
                         <constraint firstAttribute="trailing" secondItem="02U-g3-NHV" secondAttribute="trailing" id="c11-G0-YX3"/>
                         <constraint firstItem="02U-g3-NHV" firstAttribute="top" secondItem="GWk-9J-NXY" secondAttribute="top" id="fdQ-7r-sQF"/>
-                        <constraint firstAttribute="bottom" secondItem="5VS-pg-6aY" secondAttribute="bottom" id="lOg-OX-DFE"/>
+                        <constraint firstAttribute="trailing" secondItem="5VS-pg-6aY" secondAttribute="trailing" id="gOU-rs-9nX"/>
+                        <constraint firstItem="5VS-pg-6aY" firstAttribute="height" secondItem="PO9-cX-52k" secondAttribute="height" id="qmW-Wk-58J"/>
                         <constraint firstItem="02U-g3-NHV" firstAttribute="leading" secondItem="GWk-9J-NXY" secondAttribute="leading" id="tAe-ih-rYx"/>
+                        <constraint firstAttribute="bottom" secondItem="pvF-BR-HLa" secondAttribute="bottom" id="tg0-yM-7OO"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOK-Ts-zv1" userLabel="登录界面">

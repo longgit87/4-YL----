@@ -8,23 +8,14 @@
 
 #import "YLQuickLoginButton.h"
 
+
 @implementation YLQuickLoginButton
 
 
-//- (CGRect)imageRectForContentRect:(CGRect)contentRect
-//{
-//
-//    self.imageView.center = CGPointMake(self.frame.size.width * 0.5, 0);
-//    
-//
-//    return self.imageView.frame;
-//}
-//
-
 - (void)awakeFromNib
 {
+    //设置label文字居中
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.titleLabel.backgroundColor = [UIColor greenColor];
 }
 
 
@@ -37,17 +28,12 @@
     self.imageView.y = 0;
     self.imageView.centerX = self.width * 0.5;
     
-
     //文字位置
     self.titleLabel.x = 0;
     self.titleLabel.y = self.imageView.height;
-
-    
-    self.titleLabel.width = self.width;
+    self.titleLabel.width = self.width ;
     self.titleLabel.height = self.height - self.titleLabel.y;
     
-    
-
 }
 
 

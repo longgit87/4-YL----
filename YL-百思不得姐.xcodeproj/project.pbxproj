@@ -11,7 +11,6 @@
 		8A5053301B9756D6006AC6AF /* YLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A50532E1B9756D6006AC6AF /* YLLoginRegisterViewController.m */; };
 		8A5053311B9756D6006AC6AF /* YLLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A50532F1B9756D6006AC6AF /* YLLoginRegisterViewController.xib */; };
 		8A5754FE1B9816E100F6F98D /* YLQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5754FD1B9816E100F6F98D /* YLQuickLoginButton.m */; };
-		8A5755011B981A3C00F6F98D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5755001B981A3C00F6F98D /* UIView+Frame.m */; };
 		8A5755041B984D9C00F6F98D /* YLLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5755031B984D9C00F6F98D /* YLLoginRegisterTextField.m */; };
 		8A5755391B997FA900F6F98D /* YLGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5755381B997FA900F6F98D /* YLGuideView.m */; };
 		8A57553B1B997FC300F6F98D /* YLGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A57553A1B997FC300F6F98D /* YLGuideView.xib */; };
@@ -29,6 +28,7 @@
 		8AB74FEF1B96BA7200B5DAF1 /* YLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FE11B96BA7200B5DAF1 /* YLTabBarController.m */; };
 		8AB74FF01B96BA7200B5DAF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FE21B96BA7200B5DAF1 /* main.m */; };
 		8AB74FF31B96BD0E00B5DAF1 /* YLNavigationControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FF21B96BD0E00B5DAF1 /* YLNavigationControl.m */; };
+		8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,6 @@
 		8A50532F1B9756D6006AC6AF /* YLLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		8A5754FC1B9816E100F6F98D /* YLQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLQuickLoginButton.h; sourceTree = "<group>"; };
 		8A5754FD1B9816E100F6F98D /* YLQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLQuickLoginButton.m; sourceTree = "<group>"; };
-		8A5754FF1B981A3C00F6F98D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		8A5755001B981A3C00F6F98D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		8A5755021B984D9C00F6F98D /* YLLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLoginRegisterTextField.h; sourceTree = "<group>"; };
 		8A5755031B984D9C00F6F98D /* YLLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLoginRegisterTextField.m; sourceTree = "<group>"; };
 		8A5755371B997FA900F6F98D /* YLGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YLGuideView.h; path = "../../FriendTrends-关注/View/YLGuideView.h"; sourceTree = "<group>"; };
@@ -85,6 +83,8 @@
 		8AB74FE41B96BA7200B5DAF1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8AB74FF11B96BD0E00B5DAF1 /* YLNavigationControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLNavigationControl.h; sourceTree = "<group>"; };
 		8AB74FF21B96BD0E00B5DAF1 /* YLNavigationControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLNavigationControl.m; sourceTree = "<group>"; };
+		8ACDFE051B9C4B3800A4991F /* UIView+YLFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YLFrame.h"; sourceTree = "<group>"; };
+		8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,8 +335,8 @@
 			children = (
 				8AB74FDB1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.h */,
 				8AB74FDC1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m */,
-				8A5754FF1B981A3C00F6F98D /* UIView+Frame.h */,
-				8A5755001B981A3C00F6F98D /* UIView+Frame.m */,
+				8ACDFE051B9C4B3800A4991F /* UIView+YLFrame.h */,
+				8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -477,7 +477,7 @@
 				8A5755041B984D9C00F6F98D /* YLLoginRegisterTextField.m in Sources */,
 				8A5053301B9756D6006AC6AF /* YLLoginRegisterViewController.m in Sources */,
 				8AB74FEA1B96BA7200B5DAF1 /* YLSettingViewControl.m in Sources */,
-				8A5755011B981A3C00F6F98D /* UIView+Frame.m in Sources */,
+				8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */,
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
 				8AB74FED1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m in Sources */,
 				8AB74FEF1B96BA7200B5DAF1 /* YLTabBarController.m in Sources */,

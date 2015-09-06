@@ -1,20 +1,20 @@
 //
-//  UIView+Frame.m
+//  UIView+YLFrame.m
 //  YL-百思不得姐
 //
-//  Created by 陈亚龙 on 15/9/3.
+//  Created by 陈亚龙 on 15/9/6.
 //  Copyright (c) 2015年 www.xm.com. All rights reserved.
 //
 
-#import "UIView+Frame.h"
+#import "UIView+YLFrame.h"
 
-@implementation UIView (Frame)
+@implementation UIView (YLFrame)
+
 - (void)setX:(CGFloat)x
 {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
-
 }
 - (CGFloat)x
 {
@@ -46,7 +46,7 @@
 - (void)setHeight:(CGFloat)height
 {
     CGRect frame = self.frame;
-    frame.size.width = height;
+    frame.size.height = height;
     self.frame = frame;
 }
 - (CGFloat)height
@@ -64,6 +64,7 @@
 {
     return self.center.x;
 }
+
 
 - (void)setCenterY:(CGFloat)centerY
 {
