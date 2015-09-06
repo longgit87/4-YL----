@@ -29,6 +29,11 @@
 		8AB74FF01B96BA7200B5DAF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FE21B96BA7200B5DAF1 /* main.m */; };
 		8AB74FF31B96BD0E00B5DAF1 /* YLNavigationControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FF21B96BD0E00B5DAF1 /* YLNavigationControl.m */; };
 		8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */; };
+		8ACDFE0A1B9C551300A4991F /* YLTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE091B9C551300A4991F /* YLTagCell.m */; };
+		8ACDFE0C1B9C553800A4991F /* YLTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACDFE0B1B9C553800A4991F /* YLTagCell.xib */; };
+		8ACDFE0F1B9C612900A4991F /* YLTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE0E1B9C612900A4991F /* YLTag.m */; };
+		8ACDFE111B9C68BF00A4991F /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE101B9C68BF00A4991F /* Foundation+Log.m */; };
+		8ACDFE141B9C860C00A4991F /* YLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE131B9C860C00A4991F /* YLConst.m */; };
 		D6949AE653B9961C36CAAD4E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D5D2D98613408B3F28AF2A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +92,14 @@
 		8AB74FF21B96BD0E00B5DAF1 /* YLNavigationControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLNavigationControl.m; sourceTree = "<group>"; };
 		8ACDFE051B9C4B3800A4991F /* UIView+YLFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YLFrame.h"; sourceTree = "<group>"; };
 		8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLFrame.m"; sourceTree = "<group>"; };
+		8ACDFE081B9C551300A4991F /* YLTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTagCell.h; sourceTree = "<group>"; };
+		8ACDFE091B9C551300A4991F /* YLTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTagCell.m; sourceTree = "<group>"; };
+		8ACDFE0B1B9C553800A4991F /* YLTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTagCell.xib; sourceTree = "<group>"; };
+		8ACDFE0D1B9C612900A4991F /* YLTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTag.h; sourceTree = "<group>"; };
+		8ACDFE0E1B9C612900A4991F /* YLTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTag.m; sourceTree = "<group>"; };
+		8ACDFE101B9C68BF00A4991F /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		8ACDFE121B9C860C00A4991F /* YLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLConst.h; sourceTree = "<group>"; };
+		8ACDFE131B9C860C00A4991F /* YLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLConst.m; sourceTree = "<group>"; };
 		96648096E66491DBC14AD806 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C2D5D2D98613408B3F28AF2A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -211,6 +224,8 @@
 		8AB74FC11B96BA7200B5DAF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8ACDFE0D1B9C612900A4991F /* YLTag.h */,
+				8ACDFE0E1B9C612900A4991F /* YLTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +233,9 @@
 		8AB74FC21B96BA7200B5DAF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8ACDFE081B9C551300A4991F /* YLTagCell.h */,
+				8ACDFE091B9C551300A4991F /* YLTagCell.m */,
+				8ACDFE0B1B9C553800A4991F /* YLTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,11 +354,14 @@
 			children = (
 				8AB74FD81B96BA7200B5DAF1 /* AppDelegate.h */,
 				8AB74FD91B96BA7200B5DAF1 /* AppDelegate.m */,
+				8ACDFE101B9C68BF00A4991F /* Foundation+Log.m */,
 				8AB74FDA1B96BA7200B5DAF1 /* Category */,
 				8AB74FDD1B96BA7200B5DAF1 /* Control */,
 				8AB74FE21B96BA7200B5DAF1 /* main.m */,
 				8AB74FE31B96BA7200B5DAF1 /* Model */,
 				8AB74FE41B96BA7200B5DAF1 /* PrefixHeader.pch */,
+				8ACDFE121B9C860C00A4991F /* YLConst.h */,
+				8ACDFE131B9C860C00A4991F /* YLConst.m */,
 				8AB74FE51B96BA7200B5DAF1 /* View */,
 			);
 			path = "Other-其他";
@@ -482,6 +503,7 @@
 				8A5053311B9756D6006AC6AF /* YLLoginRegisterViewController.xib in Resources */,
 				8A57553B1B997FC300F6F98D /* YLGuideView.xib in Resources */,
 				8AB74F801B9551F900B5DAF1 /* Images.xcassets in Resources */,
+				8ACDFE0C1B9C553800A4991F /* YLTagCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,12 +559,16 @@
 				8A5053301B9756D6006AC6AF /* YLLoginRegisterViewController.m in Sources */,
 				8AB74FEA1B96BA7200B5DAF1 /* YLSettingViewControl.m in Sources */,
 				8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */,
+				8ACDFE141B9C860C00A4991F /* YLConst.m in Sources */,
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
 				8AB74FED1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m in Sources */,
 				8AB74FEF1B96BA7200B5DAF1 /* YLTabBarController.m in Sources */,
 				8A5755391B997FA900F6F98D /* YLGuideView.m in Sources */,
 				8AB74FE71B96BA7200B5DAF1 /* YLTagViewControl.m in Sources */,
+				8ACDFE0F1B9C612900A4991F /* YLTag.m in Sources */,
+				8ACDFE111B9C68BF00A4991F /* Foundation+Log.m in Sources */,
 				8AB74FE91B96BA7200B5DAF1 /* YLMeViewController.m in Sources */,
+				8ACDFE0A1B9C551300A4991F /* YLTagCell.m in Sources */,
 				8AB74FE61B96BA7200B5DAF1 /* YLEssenceViewController.m in Sources */,
 				8AB74FE81B96BA7200B5DAF1 /* YLFriendTrendsViewController.m in Sources */,
 				8AB74FF01B96BA7200B5DAF1 /* main.m in Sources */,

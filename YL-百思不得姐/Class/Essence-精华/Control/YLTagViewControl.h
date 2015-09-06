@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YLTagViewControl : UIViewController
+@interface YLTagViewControl : UITableViewController
 
 @end
