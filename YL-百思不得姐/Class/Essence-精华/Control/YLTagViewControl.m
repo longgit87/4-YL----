@@ -77,7 +77,8 @@ static NSString *tagId = @"tag";
     parameters[@"c"] = @"topic";
     //发送请求
     
-    __weak typeof(self) weakSelf = self;
+
+    YLWeadSelf;
     [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *task, id responseObject) {
         
         // responseObject：字典数组

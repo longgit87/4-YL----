@@ -8,7 +8,8 @@
 
 #import "YLTagCell.h"
 #import "YLTag.h"
-#import <UIImageView+WebCache.h>
+
+#import "UIImageView+YLEXT.h"
 
 @interface YLTagCell ()
 /**
@@ -43,12 +44,13 @@
 {
     _tagModel = tagModel;
     
+    //设置头像
+    [self.icon_image setHeaderIcon:tagModel.image_list];
     
-    
-    [self.icon_image sd_setImageWithURL:[NSURL URLWithString:tagModel.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-    
+    //设置标题文字
     self.theme_label.text = tagModel.theme_name;
     
+    //设置订阅数
     if (tagModel.sub_number.intValue >= 10000) {
         self.sub_label.text = [NSString stringWithFormat:@"%.2f万人订阅",tagModel.sub_number.intValue / 10000.0];
     }else

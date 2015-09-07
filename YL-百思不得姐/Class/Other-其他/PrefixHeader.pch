@@ -31,7 +31,8 @@
 #define YLColor(r,g,b) YLARGBColor(255,(r),(g),(b))
 #define YLGrayColor(v) YLColor((v),(v),(v))
 #define YLCommonBgColor YLGrayColor(206)
-
+//弱引用
+#define YLWeadSelf  __weak typeof(self) weakSelf = self;
 
 
 #endif

@@ -34,6 +34,9 @@
 		8ACDFE0F1B9C612900A4991F /* YLTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE0E1B9C612900A4991F /* YLTag.m */; };
 		8ACDFE111B9C68BF00A4991F /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE101B9C68BF00A4991F /* Foundation+Log.m */; };
 		8ACDFE141B9C860C00A4991F /* YLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE131B9C860C00A4991F /* YLConst.m */; };
+		8ACDFE1A1B9CAF1200A4991F /* UIImage+YLEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE191B9CAF1200A4991F /* UIImage+YLEXT.m */; };
+		8ACDFE1D1B9D651500A4991F /* UIImageView+YLEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE1C1B9D651500A4991F /* UIImageView+YLEXT.m */; };
+		8ACDFE201B9D7C6F00A4991F /* NSString+YLEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE1F1B9D7C6F00A4991F /* NSString+YLEXT.m */; };
 		D6949AE653B9961C36CAAD4E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D5D2D98613408B3F28AF2A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +103,12 @@
 		8ACDFE101B9C68BF00A4991F /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		8ACDFE121B9C860C00A4991F /* YLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLConst.h; sourceTree = "<group>"; };
 		8ACDFE131B9C860C00A4991F /* YLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLConst.m; sourceTree = "<group>"; };
+		8ACDFE181B9CAF1200A4991F /* UIImage+YLEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YLEXT.h"; sourceTree = "<group>"; };
+		8ACDFE191B9CAF1200A4991F /* UIImage+YLEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YLEXT.m"; sourceTree = "<group>"; };
+		8ACDFE1B1B9D651500A4991F /* UIImageView+YLEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YLEXT.h"; sourceTree = "<group>"; };
+		8ACDFE1C1B9D651500A4991F /* UIImageView+YLEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YLEXT.m"; sourceTree = "<group>"; };
+		8ACDFE1E1B9D7C6F00A4991F /* NSString+YLEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YLEXT.h"; sourceTree = "<group>"; };
+		8ACDFE1F1B9D7C6F00A4991F /* NSString+YLEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YLEXT.m"; sourceTree = "<group>"; };
 		96648096E66491DBC14AD806 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C2D5D2D98613408B3F28AF2A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -374,6 +383,10 @@
 				8AB74FDC1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m */,
 				8ACDFE051B9C4B3800A4991F /* UIView+YLFrame.h */,
 				8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */,
+				8ACDFE181B9CAF1200A4991F /* UIImage+YLEXT.h */,
+				8ACDFE191B9CAF1200A4991F /* UIImage+YLEXT.m */,
+				8ACDFE1B1B9D651500A4991F /* UIImageView+YLEXT.h */,
+				8ACDFE1C1B9D651500A4991F /* UIImageView+YLEXT.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -387,6 +400,8 @@
 				8AB74FE11B96BA7200B5DAF1 /* YLTabBarController.m */,
 				8AB74FF11B96BD0E00B5DAF1 /* YLNavigationControl.h */,
 				8AB74FF21B96BD0E00B5DAF1 /* YLNavigationControl.m */,
+				8ACDFE1E1B9D7C6F00A4991F /* NSString+YLEXT.h */,
+				8ACDFE1F1B9D7C6F00A4991F /* NSString+YLEXT.m */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -557,13 +572,16 @@
 				8AB74FEB1B96BA7200B5DAF1 /* YLNewViewController.m in Sources */,
 				8A5755041B984D9C00F6F98D /* YLLoginRegisterTextField.m in Sources */,
 				8A5053301B9756D6006AC6AF /* YLLoginRegisterViewController.m in Sources */,
+				8ACDFE1A1B9CAF1200A4991F /* UIImage+YLEXT.m in Sources */,
 				8AB74FEA1B96BA7200B5DAF1 /* YLSettingViewControl.m in Sources */,
 				8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */,
 				8ACDFE141B9C860C00A4991F /* YLConst.m in Sources */,
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
+				8ACDFE1D1B9D651500A4991F /* UIImageView+YLEXT.m in Sources */,
 				8AB74FED1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m in Sources */,
 				8AB74FEF1B96BA7200B5DAF1 /* YLTabBarController.m in Sources */,
 				8A5755391B997FA900F6F98D /* YLGuideView.m in Sources */,
+				8ACDFE201B9D7C6F00A4991F /* NSString+YLEXT.m in Sources */,
 				8AB74FE71B96BA7200B5DAF1 /* YLTagViewControl.m in Sources */,
 				8ACDFE0F1B9C612900A4991F /* YLTag.m in Sources */,
 				8ACDFE111B9C68BF00A4991F /* Foundation+Log.m in Sources */,
