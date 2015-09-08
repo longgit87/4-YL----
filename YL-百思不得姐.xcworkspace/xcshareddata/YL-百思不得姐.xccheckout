@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>581A0E34-3AE9-4BD6-932D-CBA53341B17C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>YL-百思不得姐</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>534ECF2A69A268F6D978B9A7287E7A65958E8556</key>
+		<string>https://github.com/longgit87/4-YL----.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YL-百思不得姐.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>534ECF2A69A268F6D978B9A7287E7A65958E8556</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/longgit87/4-YL----.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>534ECF2A69A268F6D978B9A7287E7A65958E8556</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>534ECF2A69A268F6D978B9A7287E7A65958E8556</string>
+			<key>IDESourceControlWCCName</key>
+			<string>6-YL-%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%EF%BC%88%E5%85%B3%E6%B3%A8%EF%BC%89</string>
+		</dict>
+	</array>
+</dict>
+</plist>

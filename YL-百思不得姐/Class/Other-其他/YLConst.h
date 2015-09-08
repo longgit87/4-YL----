@@ -5,3 +5,5 @@
 //请求路径
 UIKIT_EXTERN NSString * const YLRequestUrl;
 
+//间距
+UIKIT_EXTERN CGFloat const YLCommonMargin;

@@ -75,6 +75,9 @@
 {
 
     
+    //我
+    [self setUpChileViewWithVc:[[YLMeViewController alloc]initWithStyle:UITableViewStyleGrouped] title:@"我" image:@"tabBar_me_icon" selectImage:@"tabBar_me_click_icon"];
+    
     
     //精华
     [self setUpChileViewWithVc:[[YLEssenceViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectImage:@"tabBar_essence_click_icon"];
@@ -84,9 +87,6 @@
     //新帖
     [self setUpChileViewWithVc:[[YLNewViewController alloc]init] title:@"新帖" image:@"tabBar_new_icon" selectImage:@"tabBar_new_click_icon"];
     
-    //我
-    [self setUpChileViewWithVc:[[YLMeViewController alloc]init] title:@"我" image:@"tabBar_me_icon" selectImage:@"tabBar_me_click_icon"];
-
 
 }
 /**
