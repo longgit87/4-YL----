@@ -31,7 +31,10 @@
     
     return image;
     
+    
 }
+
+
 
 + (instancetype)circleImage:(NSString *)imageName
 {

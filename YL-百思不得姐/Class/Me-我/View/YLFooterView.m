@@ -28,11 +28,14 @@
 {
     if (self = [super initWithFrame:frame]) {
         
+         self.backgroundColor = YLCommonBgColor;
+        
         //请求参数
         NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
         parameters[@"a"] = @"square";
         parameters[@"c"] = @"topic";
       
+       
         
         //发送请求
         YLWeadSelf;
@@ -96,9 +99,13 @@
     tableVeiw.contentSize = CGSizeMake(0, CGRectGetMaxY(self.frame));
     
 
+    
 }
 - (void)clickBtn:(YLSquareBtn *)btn
 {
+    //因为我们只能请求http的数据（这里是针对该app接口的特殊情况）
+    if ([btn.square.url hasPrefix:@"http"] == NO) return;
+
     YLWebViewController *webVc = [[YLWebViewController alloc]init];
     webVc.square = btn.square;
 

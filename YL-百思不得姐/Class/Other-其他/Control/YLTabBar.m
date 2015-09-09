@@ -7,6 +7,7 @@
 //
 
 #import "YLTabBar.h"
+#import "YLPublicViewController.h"
 
 @interface YLTabBar ()
 
@@ -40,8 +41,9 @@
 }
 - (void)publishClick
 {
-    YLLogFunc;
-
+    YLPublicViewController *public = [[YLPublicViewController alloc]init];
+    [self.window.rootViewController presentViewController:public animated:NO completion:nil];
+    
 }
 /**
  *  布局按钮位置

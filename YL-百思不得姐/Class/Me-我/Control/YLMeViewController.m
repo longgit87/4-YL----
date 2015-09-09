@@ -61,7 +61,7 @@ static NSString *MeId = @"Me";
 //点击了设置
 - (void)settingClick
 {
-    YLSettingViewControl *settingVc = [[YLSettingViewControl alloc]init];
+    YLSettingViewControl *settingVc = [[YLSettingViewControl alloc]initWithStyle:UITableViewStyleGrouped];
     settingVc.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:settingVc animated:YES];

@@ -30,7 +30,7 @@
             //获得全路径
             NSString *fullSubpath = [self stringByAppendingPathComponent:subpath];
             //获得文件属性
-            size += [mgr attributesOfItemAtPath:self error:nil].fileSize;
+            size += [mgr attributesOfItemAtPath:fullSubpath error:nil].fileSize;
             
         }
         return size;
@@ -41,5 +41,6 @@
     
     
 }
+
 
 @end
