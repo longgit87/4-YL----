@@ -9,6 +9,7 @@
 #import "YLPublicViewController.h"
 #import "YLPublicButton.h"
 #import <POP.h>
+#import "YLPostWordViewController.h"
 
 @interface YLPublicViewController ()
 /**
@@ -151,43 +152,78 @@ static CGFloat const YLSpringFactor = 10;
     
 
 }
-//取消
-- (IBAction)cancel:(UIButton *)btn {
-    
+
+#pragma mark - 退出动画
+- (void)exit:(void (^)())task
+{
+
+    //禁止用户交互
     self.view.userInteractionEnabled = NO;
     //按钮消失
     for (int i = 0; i < self.buttons.count; i++) {
         
         YLPublicButton *publicBtn = self.buttons[i];
-    
-    //动画
-    POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    
-    anim.toValue = @(publicBtn.layer.position.y + YLScreenH) ;
-//    anim.springSpeed = YLSpringFactor;
-//    anim.springBounciness = YLSpringFactor;
-    anim.beginTime = CACurrentMediaTime() + [self.times[i] doubleValue];
-    [publicBtn.layer pop_addAnimation:anim forKey:nil];
-    
-   }
+        
+        //动画
+        POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+        
+        anim.toValue = @(publicBtn.layer.position.y + YLScreenH) ;
+        //    anim.springSpeed = YLSpringFactor;
+        //    anim.springBounciness = YLSpringFactor;
+        anim.beginTime = CACurrentMediaTime() + [self.times[i] doubleValue];
+        [publicBtn.layer pop_addAnimation:anim forKey:nil];
+        
+    }
     
     YLWeadSelf;
     //标语动画
     POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
     anim.toValue = @(self.sloganView.layer.position.y + YLScreenH);
     anim.beginTime = CACurrentMediaTime() + [self.times.lastObject doubleValue];
-
+    //动画完毕要做些神马
     [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-      
+        //退出控制器
         [weakSelf dismissViewControllerAnimated:NO completion:nil];
+        //调用block
+        if (task) task();
     }];
     [self.sloganView.layer pop_addAnimation:anim forKey:nil];
+    
 
+}
+
+//取消
+- (IBAction)cancel:(UIButton *)btn {
+    
+    [self exit:nil];
     
 }
 //点击按钮
-- (void)btnClick:(UIButton *)btn
+- (void)btnClick:(YLPublicButton *)btn
 {
-    [self cancel:btn];
+
+    [self exit:^{
+        NSInteger index = [self.buttons indexOfObject:btn];
+        switch (index) {
+            case 2://发段子
+            {      // 弹出发段子控制器
+                YLPostWordViewController *postWord = [[YLPostWordViewController alloc]init];
+                
+                [self.view.window.rootViewController presentViewController:[[YLNavigationControl alloc]initWithRootViewController:postWord] animated:YES completion:nil];
+                break;
+            }
+            default:
+                break;
+        }
+
+        
+        
+    }];
+
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self exit:nil];
+    
 }
 @end

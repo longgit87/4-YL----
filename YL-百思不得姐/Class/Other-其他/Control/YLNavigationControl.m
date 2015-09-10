@@ -13,6 +13,37 @@
 @end
 
 @implementation YLNavigationControl
+
++ (void)initialize
+{
+
+    /**设置UINavigationBar*/
+    UINavigationBar *bar = [UINavigationBar appearance];
+    //设置背景
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    //设置标题文字属性
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    attributes[NSFontAttributeName] = [UIFont boldSystemFontOfSize:21];
+    [bar setTitleTextAttributes:attributes];
+    
+    /**设置UIBarButtonItem*/
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    
+    //UIControlStateNormal
+    NSMutableDictionary *norAttributes = [NSMutableDictionary dictionary];
+    norAttributes[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    norAttributes[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [item setTitleTextAttributes:norAttributes forState:UIControlStateNormal];
+    
+    //UIControlStateDisabledle
+    NSMutableDictionary *disableAttributes = [NSMutableDictionary dictionary];
+    disableAttributes[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    disableAttributes[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [item setTitleTextAttributes:disableAttributes forState:UIControlStateDisabled];
+
+ 
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,8 +78,7 @@
     viewController.hidesBottomBarWhenPushed = YES;
     
     }
-    // 设置子控制器的颜色
-    //    viewController.view.backgroundColor = XMGCommonBgColor;
+
     
     // super的push方法一定要写到最后面
     // 一旦调用super的pushViewController方法,就会创建子控制器viewController的view

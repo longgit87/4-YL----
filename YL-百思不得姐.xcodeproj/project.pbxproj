@@ -17,6 +17,8 @@
 		8A7BC6661B9FF0E900C455C7 /* YLPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BC6641B9FF0E900C455C7 /* YLPublicViewController.m */; };
 		8A7BC6671B9FF0E900C455C7 /* YLPublicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BC6651B9FF0E900C455C7 /* YLPublicViewController.xib */; };
 		8A7BC66A1BA04B7A00C455C7 /* YLPublicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BC6691BA04B7A00C455C7 /* YLPublicButton.m */; };
+		8A7BC66D1BA08C6600C455C7 /* YLPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BC66C1BA08C6600C455C7 /* YLPostWordViewController.m */; };
+		8A7BC6701BA127E800C455C7 /* YLPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BC66F1BA127E800C455C7 /* YLPlaceholderTextView.m */; };
 		8AB74F801B9551F900B5DAF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB74F7F1B9551F900B5DAF1 /* Images.xcassets */; };
 		8AB74F8F1B9551F900B5DAF1 /* YL______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74F8E1B9551F900B5DAF1 /* YL______Tests.m */; };
 		8AB74FE61B96BA7200B5DAF1 /* YLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FBE1B96BA7200B5DAF1 /* YLEssenceViewController.m */; };
@@ -78,6 +80,10 @@
 		8A7BC6651B9FF0E900C455C7 /* YLPublicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLPublicViewController.xib; sourceTree = "<group>"; };
 		8A7BC6681BA04B7A00C455C7 /* YLPublicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLPublicButton.h; sourceTree = "<group>"; };
 		8A7BC6691BA04B7A00C455C7 /* YLPublicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLPublicButton.m; sourceTree = "<group>"; };
+		8A7BC66B1BA08C6600C455C7 /* YLPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLPostWordViewController.h; sourceTree = "<group>"; };
+		8A7BC66C1BA08C6600C455C7 /* YLPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLPostWordViewController.m; sourceTree = "<group>"; };
+		8A7BC66E1BA127E800C455C7 /* YLPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLPlaceholderTextView.h; sourceTree = "<group>"; };
+		8A7BC66F1BA127E800C455C7 /* YLPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLPlaceholderTextView.m; sourceTree = "<group>"; };
 		8AB74F6F1B9551F900B5DAF1 /* YL-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YL-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB74F731B9551F900B5DAF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB74F7F1B9551F900B5DAF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -186,6 +192,8 @@
 				8A7BC6631B9FF0E900C455C7 /* YLPublicViewController.h */,
 				8A7BC6641B9FF0E900C455C7 /* YLPublicViewController.m */,
 				8A7BC6651B9FF0E900C455C7 /* YLPublicViewController.xib */,
+				8A7BC66B1BA08C6600C455C7 /* YLPostWordViewController.h */,
+				8A7BC66C1BA08C6600C455C7 /* YLPostWordViewController.m */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -202,6 +210,8 @@
 			children = (
 				8A7BC6681BA04B7A00C455C7 /* YLPublicButton.h */,
 				8A7BC6691BA04B7A00C455C7 /* YLPublicButton.m */,
+				8A7BC66E1BA127E800C455C7 /* YLPlaceholderTextView.h */,
+				8A7BC66F1BA127E800C455C7 /* YLPlaceholderTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -657,6 +667,7 @@
 				8A5053301B9756D6006AC6AF /* YLLoginRegisterViewController.m in Sources */,
 				8ACDFE1A1B9CAF1200A4991F /* UIImage+YLEXT.m in Sources */,
 				8ACDFE291B9DD30E00A4991F /* YLSquare.m in Sources */,
+				8A7BC66D1BA08C6600C455C7 /* YLPostWordViewController.m in Sources */,
 				8AB74FEA1B96BA7200B5DAF1 /* YLSettingViewControl.m in Sources */,
 				8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */,
 				8ACDFE141B9C860C00A4991F /* YLConst.m in Sources */,
@@ -666,6 +677,7 @@
 				8ACDFE1D1B9D651500A4991F /* UIImageView+YLEXT.m in Sources */,
 				8AB74FED1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m in Sources */,
 				8ACDFE461B9EB6D800A4991F /* YLClearCacheCell.m in Sources */,
+				8A7BC6701BA127E800C455C7 /* YLPlaceholderTextView.m in Sources */,
 				8ACDFE491B9ED89700A4991F /* YLThirdCell.m in Sources */,
 				8AB74FEF1B96BA7200B5DAF1 /* YLTabBarController.m in Sources */,
 				8A5755391B997FA900F6F98D /* YLGuideView.m in Sources */,
