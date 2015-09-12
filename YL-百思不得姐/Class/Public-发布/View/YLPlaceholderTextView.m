@@ -36,7 +36,7 @@
 /**
  * 每次调用drawRect:方法，都会将以前画的东西清除掉
  */
-- (void)drawRect:(CGRect)rect {
+- (void)drawRect:(CGRect)rect{
     //有输入的字了，就返回
     //    if (self.text.length || self.attributedText.length) return;
     if (self.hasText) return;

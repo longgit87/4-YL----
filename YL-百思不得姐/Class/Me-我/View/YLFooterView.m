@@ -28,21 +28,19 @@
 {
     if (self = [super initWithFrame:frame]) {
         
-         self.backgroundColor = YLCommonBgColor;
+         self.backgroundColor = [UIColor whiteColor];
         
         //请求参数
         NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
         parameters[@"a"] = @"square";
         parameters[@"c"] = @"topic";
-      
-       
         
         //发送请求
         YLWeadSelf;
         [[AFHTTPSessionManager manager] GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask * task, id responseObject) {
           
             [weakSelf createSquaresWithArray:[YLSquare objectArrayWithKeyValuesArray:responseObject[@"square_list"]]];
-
+          
             
         } failure:^ void(NSURLSessionDataTask * task, NSError * error) {
             

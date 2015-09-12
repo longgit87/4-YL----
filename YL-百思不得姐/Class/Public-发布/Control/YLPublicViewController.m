@@ -88,7 +88,7 @@ static CGFloat const YLSpringFactor = 10;
     
     for (int i = 0; i < count; i++) {
         
-        UIButton *btn = [[YLPublicButton alloc]init];
+        YLPublicButton *btn = [[YLPublicButton alloc]init];
         
         btn.width = -1; // 按钮的尺寸为0，还是能看见文字缩成一个点，设置按钮的尺寸为负数，那么就看不见文字了
         [btn setImage:[UIImage imageNamed:imageNames[i]] forState:UIControlStateNormal];
@@ -101,7 +101,7 @@ static CGFloat const YLSpringFactor = 10;
         
         //添加监听
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-        
+
         [self.buttons addObject:btn];
         [self.view addSubview:btn];
         
@@ -210,6 +210,7 @@ static CGFloat const YLSpringFactor = 10;
                 YLPostWordViewController *postWord = [[YLPostWordViewController alloc]init];
                 
                 [self.view.window.rootViewController presentViewController:[[YLNavigationControl alloc]initWithRootViewController:postWord] animated:YES completion:nil];
+             
                 break;
             }
             default:

@@ -17,8 +17,6 @@
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
 
-        
-        
     }
 
     return self;
@@ -27,7 +25,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+
     
     //图片
     self.imageView.x = self.width * 0.2;

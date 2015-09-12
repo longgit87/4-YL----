@@ -8,6 +8,7 @@
 
 #import "YLTabBar.h"
 #import "YLPublicViewController.h"
+#import "YLAddTagViewController.h"
 
 @interface YLTabBar ()
 
@@ -41,9 +42,11 @@
 }
 - (void)publishClick
 {
-    YLPublicViewController *public = [[YLPublicViewController alloc]init];
-    [self.window.rootViewController presentViewController:public animated:NO completion:nil];
-    
+//    YLPublicViewController *public = [[YLPublicViewController alloc]init];
+//    [self.window.rootViewController presentViewController:public animated:NO completion:nil];
+    YLAddTagViewController *tag = [[YLAddTagViewController alloc]init];
+    YLNavigationControl *nav = [[YLNavigationControl alloc]initWithRootViewController:tag];
+    [self.window.rootViewController presentViewController:nav animated:YES completion:nil];
 }
 /**
  *  布局按钮位置

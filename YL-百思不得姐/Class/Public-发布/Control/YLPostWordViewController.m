@@ -8,18 +8,69 @@
 
 #import "YLPostWordViewController.h"
 #import "YLPlaceholderTextView.h"
+#import "YLAddTagToolBar.h"
 
 @interface YLPostWordViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) YLPlaceholderTextView *textView;
-
+@property (weak, nonatomic) YLAddTagToolBar *bar;
 @end
 
 @implementation YLPostWordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.view.backgroundColor = YLCommonBgColor;
+    //设置导航栏
+    [self setupNavigation];
+    //设置textView
+    [self setupTextView];
+    //设置toolbar
+    [self setupToolBar];
+    
+}
+/* UIKeyboardAnimationCurveUserInfoKey = 7;
+ UIKeyboardAnimationDurationUserInfoKey = "0.25";
+ UIKeyboardBoundsUserInfoKey = "NSRect: {{0, 0}, {375, 329}}";
+ UIKeyboardCenterBeginUserInfoKey = "NSPoint: {187.5, 831.5}";
+ UIKeyboardCenterEndUserInfoKey = "NSPoint: {187.5, 502.5}";
+ UIKeyboardFrameBeginUserInfoKey = "NSRect: {{0, 667}, {375, 329}}";
+ UIKeyboardFrameEndUserInfoKey = "NSRect: {{0, 338}, {375, 329}}";
+ }
+*/
+- (void)keyboardWillChangeFrame:(NSNotification *)note
+{
+
+    //键盘弹出后最终的位置
+    CGRect rect = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    //弹出键盘所用的时间
+    CGFloat time = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    //动画
+    [UIView animateWithDuration:time animations:^{
+
+        self.bar.transform = CGAffineTransformMakeTranslation(0, rect.origin.y - YLScreenH);
+
+    }];
+}
+- (void)setupToolBar
+{
+    
+    YLAddTagToolBar *bar = [YLAddTagToolBar toolBar];
+    bar.width = YLScreenW;
+    bar.y = YLScreenH - bar.height;
+    [self.view addSubview:bar];
+
+    self.bar = bar;
+    
+    //监听键盘的弹出点击
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+
+
+}
+//设置导航栏
+- (void)setupNavigation
+{
+
     //标题
     self.title = @"发表文字";
     //左边按钮
@@ -29,10 +80,9 @@
     self.navigationItem.rightBarButtonItem.enabled = NO;
     //强制刷新，马上刷新现在的状态
     [self.navigationController.navigationBar layoutIfNeeded];
-    
-    [self setupTextView];
-    
+
 }
+
 //设置textView
 - (void)setupTextView
 {
@@ -44,9 +94,12 @@
     textView.y = 64;
     textView.alwaysBounceVertical = YES;//让内容可以向下拖拽
     self.automaticallyAdjustsScrollViewInsets = NO;
+
     [self.view addSubview:textView];
-    
+
     self.textView = textView;
+    //成为第一响应者，弹出键盘
+    [self.textView becomeFirstResponder];
 
 }
 - (void)post
