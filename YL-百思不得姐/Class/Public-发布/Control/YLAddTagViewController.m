@@ -138,6 +138,8 @@
             
         }else{//最后一个字符不是逗号的情况
            
+            //排布文本框
+            
             //获得字符串的长度
             NSDictionary *attrs = @{NSFontAttributeName:self.textField.font};
             CGFloat textW = [text sizeWithAttributes:attrs].width;
@@ -159,6 +161,7 @@
         self.tipBtn.y = CGRectGetMaxY(self.textField.frame) + YLCommonMargin;
         [self.tipBtn setTitle:[NSString stringWithFormat:@"添加标签：%@",self.textField.text] forState:UIControlStateNormal];
     }else{//文本框没有文字
+        
         self.tipBtn.hidden = YES;
     }
     
@@ -169,11 +172,12 @@
  */
 - (void)tipBtnClick
 {
-    
+    if (self.textField.hasText == NO) return;
    //创建标签按钮
     UIButton *newTagButton = [YLTagButton buttonWithType:UIButtonTypeCustom];
 
-  
+    [newTagButton addTarget:self action:@selector(tagBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+
     [newTagButton setTitle:self.textField.text forState:UIControlStateNormal];
 
     [self.contentView addSubview:newTagButton];
@@ -218,7 +222,7 @@
 
     }else{//文本框不用换行
         self.textField.y = newTagButton.y;
-        self.textField.x = CGRectGetMaxX(newTagButton.frame) + YLCommonSmallMargin;
+        self.textField.x = leftWidth;
     }
     
     self.textField.text = nil;
@@ -226,6 +230,52 @@
         //隐藏提醒按钮
         self.tipBtn.hidden = YES;
 
+}
+/**
+ *  点击删除标签
+ *
+ */
+- (void)tagBtnClick:(UIButton *)tagBtn
+{
+    //即将被删除的标签按钮的索引
+    NSInteger index = [self.tagButtons indexOfObject:tagBtn];
+    //从父控件中删除按钮，并从数组中删除
+    [tagBtn removeFromSuperview];
+    [self.tagButtons removeObject:tagBtn];
+
+    for (NSInteger i = index; i < self.tagButtons.count; i++) {
+        
+        YLTagButton *btn = self.tagButtons[i];
+        
+        
+        if (i > 0) {//不是第一个按钮
+            
+            YLTagButton *previousBtn = self.tagButtons[i-1];
+            
+            CGFloat leftWidth = CGRectGetMaxX(previousBtn.frame) + YLCommonSmallMargin;
+            CGFloat rightWidth = self.contentView.width - leftWidth;
+            
+            if (btn.width <= rightWidth) {//同一行
+                btn.x = leftWidth;
+                btn.y = previousBtn.y;
+            }else{//不同行
+                
+                btn.x = 0;
+                btn.y = CGRectGetMaxY(previousBtn.frame) + YLCommonSmallMargin;
+                
+            }
+            
+            
+        }else{//是第一个按钮
+        
+            btn.x = 0;
+            btn.y = 0;
+        
+        }
+       
+        
+    }
+    
 }
 //取消
 - (void)cancel
