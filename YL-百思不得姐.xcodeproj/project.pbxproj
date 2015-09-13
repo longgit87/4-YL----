@@ -35,6 +35,7 @@
 		8AB74FF01B96BA7200B5DAF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FE21B96BA7200B5DAF1 /* main.m */; };
 		8AB74FF31B96BD0E00B5DAF1 /* YLNavigationControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FF21B96BD0E00B5DAF1 /* YLNavigationControl.m */; };
 		8AC8D1121BA3CDA500FB8698 /* YLTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D1111BA3CDA500FB8698 /* YLTagButton.m */; };
+		8AC8D1151BA53C4D00FB8698 /* YLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D1141BA53C4D00FB8698 /* YLTextField.m */; };
 		8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */; };
 		8ACDFE0A1B9C551300A4991F /* YLTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE091B9C551300A4991F /* YLTagCell.m */; };
 		8ACDFE0C1B9C553800A4991F /* YLTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACDFE0B1B9C553800A4991F /* YLTagCell.xib */; };
@@ -123,6 +124,8 @@
 		8AB74FF21B96BD0E00B5DAF1 /* YLNavigationControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLNavigationControl.m; sourceTree = "<group>"; };
 		8AC8D1101BA3CDA500FB8698 /* YLTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTagButton.h; sourceTree = "<group>"; };
 		8AC8D1111BA3CDA500FB8698 /* YLTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTagButton.m; sourceTree = "<group>"; };
+		8AC8D1131BA53C4D00FB8698 /* YLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTextField.h; sourceTree = "<group>"; };
+		8AC8D1141BA53C4D00FB8698 /* YLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTextField.m; sourceTree = "<group>"; };
 		8ACDFE051B9C4B3800A4991F /* UIView+YLFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YLFrame.h"; sourceTree = "<group>"; };
 		8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLFrame.m"; sourceTree = "<group>"; };
 		8ACDFE081B9C551300A4991F /* YLTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTagCell.h; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				8A7BC6B61BA1AC7E00C455C7 /* YLAddTagToolBar.xib */,
 				8AC8D1101BA3CDA500FB8698 /* YLTagButton.h */,
 				8AC8D1111BA3CDA500FB8698 /* YLTagButton.m */,
+				8AC8D1131BA53C4D00FB8698 /* YLTextField.h */,
+				8AC8D1141BA53C4D00FB8698 /* YLTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -699,6 +704,7 @@
 				8ACDFE231B9DB6B100A4991F /* YLMeCell.m in Sources */,
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
 				8A7BC66A1BA04B7A00C455C7 /* YLPublicButton.m in Sources */,
+				8AC8D1151BA53C4D00FB8698 /* YLTextField.m in Sources */,
 				8ACDFE1D1B9D651500A4991F /* UIImageView+YLEXT.m in Sources */,
 				8AB74FED1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m in Sources */,
 				8ACDFE461B9EB6D800A4991F /* YLClearCacheCell.m in Sources */,

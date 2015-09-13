@@ -9,11 +9,13 @@
 
 #import "YLAddTagViewController.h"
 #import "YLTagButton.h"
+#import "YLTextField.h"
+#import <SVProgressHUD.h>
 
 @interface YLAddTagViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) UIView *contentView;
-@property (weak, nonatomic) UITextField *textField;
+@property (weak, nonatomic) YLTextField *textField;
 @property (weak, nonatomic) UIButton *tipBtn;
 @property (strong, nonatomic) NSMutableArray *tagButtons;
 @end
@@ -67,13 +69,24 @@
     //设置文本框
     [self setupTextField];
     
+    [self setupTags];
+    
  
 }
-
+- (void)setupTags
+{
+    self.textField.text = @"愿者";
+    [self tipBtnClick];
+    
+    self.textField.text = @"上钩";
+    [self tipBtnClick];
+}
+//设置文本框
 - (void)setupTextField
 {
+    YLWeadSelf;
 
-    UITextField *textField = [[UITextField alloc]init];
+    YLTextField *textField = [[YLTextField alloc]init];
     textField.x = 0;
     textField.y = 0;
     textField.width = self.contentView.width;
@@ -95,6 +108,14 @@
     
     self.textField = textField;
     
+       // 设置点击删除键需要执行的操作
+    textField.deleteBackwardOperation = ^{
+    
+        //判断文本框是否有字
+        if (self.textField.hasText) return ;
+        //点击最后一个标签按钮（删除最后一个标签）
+        [weakSelf tagBtnClick:self.tagButtons.lastObject];
+    };
 }
 
 - (void)setupContentView
@@ -137,24 +158,11 @@
             [self tipBtnClick];
             
         }else{//最后一个字符不是逗号的情况
-           
+            
             //排布文本框
-            
-            //获得字符串的长度
-            NSDictionary *attrs = @{NSFontAttributeName:self.textField.font};
-            CGFloat textW = [text sizeWithAttributes:attrs].width;
-            
-            //右边剩余长度
-            UIButton *lastBtn = self.tagButtons.lastObject;
-            CGFloat rightW = self.contentView.width - CGRectGetMaxX(lastBtn.frame);
-            
-            if (textW > rightW) {//输入框文字超出剩余空间，要换行
-                
-                self.textField.x = 0;
-                self.textField.y = CGRectGetMaxY(lastBtn.frame) + YLCommonSmallMargin;
-                
-            }
-       
+            [self setupTextfieldFrame];
+           
+
         }
         
         self.tipBtn.hidden = NO;
@@ -167,7 +175,7 @@
     
 }
 /**
- *  监听提醒按钮的点击
+ *  点击了提醒按钮
  *
  */
 - (void)tipBtnClick
@@ -211,22 +219,13 @@
     
         //添加按钮到数组
         [self.tagButtons addObject:newTagButton];
+    
+    
+        //布局文本框
+        self.textField.text = nil;
+        [self setupTextfieldFrame];
 
-    
-        //布局textfield
-    CGFloat leftWidth = CGRectGetMaxX(newTagButton.frame) + YLCommonSmallMargin;
-    CGFloat rightWidth = self.contentView.width - leftWidth;
-    if (rightWidth < 100) {//文本框要换行
-        self.textField.y = CGRectGetMaxY(newTagButton.frame) + YLCommonMargin;
-        self.textField.x = 0;
-
-    }else{//文本框不用换行
-        self.textField.y = newTagButton.y;
-        self.textField.x = leftWidth;
-    }
-    
-    self.textField.text = nil;
-    
+//        self.textField.text = nil;
         //隐藏提醒按钮
         self.tipBtn.hidden = YES;
 
@@ -243,12 +242,14 @@
     [tagBtn removeFromSuperview];
     [self.tagButtons removeObject:tagBtn];
 
-    for (NSInteger i = index; i < self.tagButtons.count; i++) {
+    for (NSInteger i = index; i < self.tagButtons.count; i++)
+    {
         
         YLTagButton *btn = self.tagButtons[i];
         
         
-        if (i > 0) {//不是第一个按钮
+        if (i > 0)
+        {//不是第一个按钮
             
             YLTagButton *previousBtn = self.tagButtons[i-1];
             
@@ -265,7 +266,6 @@
                 
             }
             
-            
         }else{//是第一个按钮
         
             btn.x = 0;
@@ -273,17 +273,19 @@
         
         }
        
-        
     }
-    
+    //排布文本框
+    [self setupTextfieldFrame];
+
 }
-//取消
+
+//点击取消
 - (void)cancel
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
-//完成
+//点击完成
 - (void)done
 {
 
@@ -298,5 +300,32 @@
     [self tipBtnClick];
     
     return YES;
+}
+#pragma mark - 设置控件的frame
+/**
+ *  排布文本框
+ */
+- (void)setupTextfieldFrame
+{
+
+    //获得字符串的长度
+    NSDictionary *attrs = @{NSFontAttributeName:self.textField.font};
+    CGFloat textW = [self.textField.text sizeWithAttributes:attrs].width;
+    textW = MAX(100, textW);
+
+    YLTagButton *lastBtn = self.tagButtons.lastObject;
+  
+    CGFloat leftWidth = CGRectGetMaxX(lastBtn.frame) + YLCommonSmallMargin;
+    CGFloat rightWidth = self.contentView.width - leftWidth;
+    if (rightWidth < textW) {//文本框要换行
+        self.textField.y = CGRectGetMaxY(lastBtn.frame) + YLCommonMargin;
+        self.textField.x = 0;
+        
+    }else{//文本框不用换行
+        self.textField.y = lastBtn.y;
+        self.textField.x = leftWidth;
+    }
+ 
+    
 }
 @end

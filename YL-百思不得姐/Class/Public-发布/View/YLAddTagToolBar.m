@@ -11,6 +11,7 @@
 
 @interface YLAddTagToolBar ()
 @property (weak, nonatomic) IBOutlet UIView *topView;
+@property (copy, nonatomic) void (^getTagBlock)(NSArray *tags);
 
 @end
 

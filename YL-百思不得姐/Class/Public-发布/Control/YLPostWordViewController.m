@@ -13,6 +13,7 @@
 @interface YLPostWordViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) YLPlaceholderTextView *textView;
 @property (weak, nonatomic) YLAddTagToolBar *bar;
+
 @end
 
 @implementation YLPostWordViewController
@@ -29,15 +30,7 @@
     [self setupToolBar];
     
 }
-/* UIKeyboardAnimationCurveUserInfoKey = 7;
- UIKeyboardAnimationDurationUserInfoKey = "0.25";
- UIKeyboardBoundsUserInfoKey = "NSRect: {{0, 0}, {375, 329}}";
- UIKeyboardCenterBeginUserInfoKey = "NSPoint: {187.5, 831.5}";
- UIKeyboardCenterEndUserInfoKey = "NSPoint: {187.5, 502.5}";
- UIKeyboardFrameBeginUserInfoKey = "NSRect: {{0, 667}, {375, 329}}";
- UIKeyboardFrameEndUserInfoKey = "NSRect: {{0, 338}, {375, 329}}";
- }
-*/
+
 - (void)keyboardWillChangeFrame:(NSNotification *)note
 {
 
@@ -61,6 +54,9 @@
     [self.view addSubview:bar];
 
     self.bar = bar;
+    
+    
+    
     
     //监听键盘的弹出点击
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
