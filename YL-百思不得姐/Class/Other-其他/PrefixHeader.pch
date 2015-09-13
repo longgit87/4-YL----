@@ -33,6 +33,9 @@
 #define YLColor(r,g,b) YLARGBColor(255,(r),(g),(b))
 #define YLGrayColor(v) YLColor((v),(v),(v))
 #define YLCommonBgColor YLGrayColor(206)
+//标签的背景颜色
+#define YLTagBgColor YLColor(57, 116, 201)
+
 //弱引用
 #define YLWeadSelf  __weak typeof(self) weakSelf = self;
 

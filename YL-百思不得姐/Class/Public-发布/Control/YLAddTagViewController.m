@@ -75,11 +75,11 @@
 }
 - (void)setupTags
 {
-    self.textField.text = @"愿者";
-    [self tipBtnClick];
-    
-    self.textField.text = @"上钩";
-    [self tipBtnClick];
+    for (NSString *text in self.tags) {
+        self.textField.text = text;
+        [self tipBtnClick];
+    }
+
 }
 //设置文本框
 - (void)setupTextField
@@ -162,7 +162,6 @@
             //排布文本框
             [self setupTextfieldFrame];
            
-
         }
         
         self.tipBtn.hidden = NO;
@@ -288,7 +287,13 @@
 //点击完成
 - (void)done
 {
+    // 将self.tagButtons中存放的所有对象的currentTitle属性值取出来，放到一个新的数组中，并返回
+    NSArray *tags = [self.tagButtons valueForKeyPath:@"currentTitle"];
+   
+    !self.getTagsBlock ? : self.getTagsBlock(tags);
 
+    //关闭当前控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 /**
