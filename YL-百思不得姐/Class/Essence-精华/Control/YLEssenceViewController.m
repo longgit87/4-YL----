@@ -15,7 +15,7 @@
 #import "YLPictureViewController.h"
 #import "YLWordViewController.h"
 
-@interface YLEssenceViewController ()
+@interface YLEssenceViewController ()<UIScrollViewDelegate>
 /**选中的按钮*/
 @property (weak, nonatomic) YLTitleButton *selectedTitleBtn;
 /**标题底部View*/
@@ -37,6 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 
     [self setUpNavigationItem];
     
@@ -89,7 +90,7 @@
 
     //添加titleView
     UIView *titleView = [[UIView alloc]init];
-    titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     //设置标题View的frame
     titleView.x = 0;
     titleView.y = 64;
@@ -147,22 +148,26 @@
  */
 - (void)setupScrollView
 {
+    // 不要自动调整scrollView的contentInset
+    self.automaticallyAdjustsScrollViewInsets = NO;
     //创建一个scrollView
     UIScrollView *scrollView = [[UIScrollView alloc]init];
-//    scrollView.backgroundColor = [UIColor greenColor];
+    scrollView.backgroundColor = YLCommonBgColor;
     scrollView.frame = self.view.bounds;
-    self.scrollView.contentSize = CGSizeMake(self.titleButtons.count * self.view.width, self.view.height);
-    [self.view addSubview:scrollView];
+    scrollView.pagingEnabled = YES;
+    scrollView.delegate = self;
+    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width,0);// self.view.height
     
+    scrollView.contentInset = UIEdgeInsetsMake(YLNavBarMaxY + 35, 0, 49, 0);
+
+    [self.view addSubview:scrollView];
     self.scrollView = scrollView;
-YLLog(@"%@",NSStringFromUIEdgeInsets(self.scrollView.contentInset));
-
+    
+    //默认选中第0个子控制器
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+    
 }
-- (void)viewDidAppear:(BOOL)animated
-{
 
-    YLLog(@"%@",NSStringFromUIEdgeInsets(self.scrollView.contentInset));
-}
 /**
  *  点击标题按钮
  */
@@ -171,7 +176,8 @@ YLLog(@"%@",NSStringFromUIEdgeInsets(self.scrollView.contentInset));
     titleButton.selected = YES;
     self.selectedTitleBtn.selected = NO;
     self.selectedTitleBtn = titleButton;
-    
+   
+    // 底部控件的位置和尺寸
     [UIView animateWithDuration:0.25 animations:^{
         
         self.titleBottomView.width = titleButton.titleLabel.width;
@@ -179,9 +185,10 @@ YLLog(@"%@",NSStringFromUIEdgeInsets(self.scrollView.contentInset));
     }];
     
     NSInteger index = [self.titleButtons indexOfObject:titleButton];
-
-    self.scrollView.contentOffset = CGPointMake(index * self.view.width, 0);
-    [self.scrollView setContentOffset:self.scrollView.contentOffset animated:YES];
+//    self.scrollView.contentSize = CGSizeMake(self.titleButtons.count * self.view.width, self.view.height);
+    CGPoint offset = self.scrollView.contentOffset;
+    offset.x = index * self.view.width;
+    [self.scrollView setContentOffset:offset animated:YES];
    
 
 }
@@ -208,5 +215,34 @@ YLLog(@"%@",NSStringFromUIEdgeInsets(self.scrollView.contentInset));
     [self.navigationController pushViewController:tag animated:YES];
 
 }
+/**
+ * 当滚动动画完毕的时候调用（通过代码setContentOffset:animated:让scrollView滚动完毕后，就会调用这个方法）
+ * 如果执行完setContentOffset:animated:后，scrollView的偏移量并没有发生改变的话，就不会调用scrollViewDidEndScrollingAnimation:方法
+ */
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    //出去对应的子控制器
+    NSInteger index = scrollView.contentOffset.x / self.view.width;
+    UIViewController *willShowChildVc = self.childViewControllers[index];
+    
+    //如果子控制器被创建过了就返回
+    if (willShowChildVc.isViewLoaded) return;
+    
+    willShowChildVc.view.frame = scrollView.bounds;
+    
+    [scrollView addSubview:willShowChildVc.view];
 
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+    
+    //点击标题按钮
+    NSInteger index = scrollView.contentOffset.x / self.view.width;
+    [self clickTitleBtn:self.titleButtons[index]];
+//
+
+}
 @end

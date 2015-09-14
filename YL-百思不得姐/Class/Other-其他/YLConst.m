@@ -16,3 +16,8 @@ CGFloat const YLNavBarMaxY = 64;
 /**标签的高度*/
 CGFloat const YLTagHeight = 30;
 
+/**标题工具条titleView的高度*/
+CGFloat const YLTitleHeight = 35;
+
+/**UITabBar的高度*/
+CGFloat const YLTabBarHeight = 49;

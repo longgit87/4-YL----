@@ -16,3 +16,9 @@ UIKIT_EXTERN CGFloat const YLNavBarMaxY;
 
 /**标签的高度*/
 UIKIT_EXTERN CGFloat const YLTagHeight;
+
+/**标题工具条titleView的高度*/
+UIKIT_EXTERN CGFloat const YLTitleHeight;
+
+/**UITabBar的高度*/
+UIKIT_EXTERN CGFloat const YLTabBarHeight;

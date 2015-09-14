@@ -13,11 +13,22 @@
 @end
 
 @implementation YLAllViewController
-static NSString *ID = @"all";
+/*
+ 1.要想让一个scrollView的内容能够穿透整个屏幕
+ 1> 让scrollView的frame占据整个屏幕
+ 
+ 2.要想让用户能看清楚所有的内容，不被导航栏和tabbar挡住
+ 1> 设置scrollView的contentInset属性
+ */
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.tableView registerClass:[YLAllViewController class] forCellReuseIdentifier:ID];
+    self.tableView.backgroundColor = YLCommonBgColor;
+    //设置内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(YLNavBarMaxY + YLTitleHeight, 0, YLTabBarHeight, 0);
+    //设置右边滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 
 }
 #pragma mark - Table view data source
@@ -32,6 +43,7 @@ static NSString *ID = @"all";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    static NSString *ID = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     if (!cell) {
@@ -39,7 +51,6 @@ static NSString *ID = @"all";
     }
 
     cell.textLabel.text = [NSString stringWithFormat:@"%@--%zd",self.title,indexPath.row];
-    YLLog(@"%@",cell.textLabel.text);
     return cell;
 }
 
