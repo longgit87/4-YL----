@@ -16,6 +16,7 @@
 #import "YLConst.h"
 #import "NSString+YLEXT.h"
 #import "UITextField+YLEXT.h"
+#import "UIImageView+YLEXT.h"
 
 
 //日志输出
@@ -35,6 +36,9 @@
 #define YLCommonBgColor YLGrayColor(206)
 //标签的背景颜色
 #define YLTagBgColor YLColor(57, 116, 201)
+
+//将数据写成plist文件到桌面
+#define YLWriteToPlist(data,filename) [data writeToFile:[NSString stringWithFormat:@"/Users/chenyalong/Desktop/%@.plist",filename] atomically:YES];
 
 //弱引用
 #define YLWeadSelf  __weak typeof(self) weakSelf = self;

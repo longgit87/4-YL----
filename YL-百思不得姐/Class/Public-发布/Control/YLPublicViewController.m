@@ -9,8 +9,8 @@
 #import "YLPublicViewController.h"
 #import "YLPublicButton.h"
 #import <POP.h>
-#import "YLPostWordViewController.h"
 
+#import "YLPostWordViewController.h"
 @interface YLPublicViewController ()
 /**
  *  按钮

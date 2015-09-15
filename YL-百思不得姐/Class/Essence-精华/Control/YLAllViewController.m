@@ -7,12 +7,39 @@
 //
 
 #import "YLAllViewController.h"
+#import <AFNetworking.h>
+#import <MJRefresh.h>
+#import <MJExtension.h>
+#import "YLTopic.h"
+#import "YLTopicCell.h"
 
 @interface YLAllViewController ()
-
+/**
+ *  请求管理者
+ */
+@property (strong, nonatomic) AFHTTPSessionManager *manager;
+/**
+ *  所有帖子的数据
+ */
+@property (strong, nonatomic) NSMutableArray *topics;
+/**
+ *  加载下一页的数据
+ */
+@property (copy, nonatomic) NSString *maxtime;
 @end
 
 @implementation YLAllViewController
+
+static NSString *ID = @"topicCell";
+
+- (AFHTTPSessionManager *)manager
+{
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
 /*
  1.要想让一个scrollView的内容能够穿透整个屏幕
  1> 让scrollView的frame占据整个屏幕
@@ -24,36 +51,144 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+    [self setuptable];
+
+    [self setupRefresh];
+}
+
+- (void)setuptable
+{
+
     self.tableView.backgroundColor = YLCommonBgColor;
     //设置内边距
     self.tableView.contentInset = UIEdgeInsetsMake(YLNavBarMaxY + YLTitleHeight, 0, YLTabBarHeight, 0);
     //设置右边滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 
+    self.tableView.rowHeight = 200;
+    //注册cell
+    [self.tableView registerNib: [UINib nibWithNibName:NSStringFromClass([YLTopicCell class]) bundle:nil] forCellReuseIdentifier:ID];
+    
+
+}
+- (void)setupRefresh
+{
+    //下拉刷新
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
+    
+    //自动改变透明度
+    self.tableView.header.automaticallyChangeAlpha = YES;
+    
+    //马上进入刷新状态
+    [self.tableView.header beginRefreshing];
+    
+    //上啦刷新
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
+}
+/**
+ *  加载最新帖子数据
+ */
+- (void)loadNewTopics
+{
+    //取消之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+
+    // 请求参数
+    NSDictionary *parameters = @{
+                                 @"a":@"list",
+                                 @"c":@"data",
+                                 @"type":@1
+                                 
+                                 };
+
+    YLWeadSelf;
+    [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *tast, id responseObject) {
+     //  YLWriteToPlist(responseObject, @"topics");
+        
+        
+        //字典转模型
+        weakSelf.topics = [YLTopic objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        //储存maxtime
+        weakSelf.maxtime = responseObject[@"info"][@"maxtime"];
+        
+        //刷新表格
+        [self.tableView reloadData];
+        
+        //结束刷新
+        [weakSelf.tableView.header endRefreshing];
+
+    } failure:^ void(NSURLSessionDataTask * tast, NSError * error) {
+        YLLog(@"私奔");
+        
+        //结束刷新
+        [weakSelf.tableView.header endRefreshing];
+    }];
+
+}
+/**
+ *  加载更多
+ */
+- (void)loadMoreTopics
+{
+    //取消之前所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    //请求参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @1;
+    parameters[@"maxtime"] = self.maxtime;
+    
+    YLWeadSelf;
+    [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *task, id responseObject) {
+       
+        //字典数组 -> 模型数组
+        NSArray *moreTopics = [YLTopic objectArrayWithKeyValuesArray:responseObject[@"list"]];
+       
+        [weakSelf.topics addObjectsFromArray:moreTopics];
+        //储存maxtime
+        weakSelf.maxtime = responseObject[@"info"][@"maxtime"];
+        //刷新表格数据
+        [self.tableView reloadData];
+        //结束上啦刷新
+        [self.tableView.footer endRefreshing];
+        
+    } failure:^ void(NSURLSessionDataTask *task, NSError *error) {
+        
+        //结束上啦刷新
+        [self.tableView.footer endRefreshing];
+    }];
+    
+    
 }
 #pragma mark - Table view data source
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
 
-    return 50;
+    return self.topics.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
+    YLTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%@--%zd",self.title,indexPath.row];
+
+    cell.topic = self.topics[indexPath.row];;
+
     return cell;
 }
 
-
+//选中一行cell时调用
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //取消选中cell时的选中效果
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
 
 @end
