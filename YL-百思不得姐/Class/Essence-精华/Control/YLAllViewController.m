@@ -67,7 +67,7 @@ static NSString *ID = @"topicCell";
     //设置右边滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 
-    self.tableView.rowHeight = 200;
+    self.tableView.rowHeight = 300;
     //注册cell
     [self.tableView registerNib: [UINib nibWithNibName:NSStringFromClass([YLTopicCell class]) bundle:nil] forCellReuseIdentifier:ID];
     

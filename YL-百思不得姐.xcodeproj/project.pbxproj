@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A26FA1A1BA848BF00F19F7F /* NSDate+YLEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA191BA848BF00F19F7F /* NSDate+YLEXT.m */; };
 		8A4136CA1BA7B2AE0006AAA5 /* YLTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */; };
 		8A4136CC1BA7B5820006AAA5 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */; };
 		8A4136D01BA7C4960006AAA5 /* YLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CE1BA7C4960006AAA5 /* YLTopicCell.m */; };
@@ -80,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		1779C2041DD587699318D3EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8A26FA181BA848BF00F19F7F /* NSDate+YLEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YLEXT.h"; sourceTree = "<group>"; };
+		8A26FA191BA848BF00F19F7F /* NSDate+YLEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YLEXT.m"; sourceTree = "<group>"; };
 		8A4136C81BA7B2AE0006AAA5 /* YLTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopic.h; sourceTree = "<group>"; };
 		8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopic.m; sourceTree = "<group>"; };
 		8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 				8ACDFE1F1B9D7C6F00A4991F /* NSString+YLEXT.m */,
 				8AE67D421BA31A4700914E9F /* UITextField+YLEXT.h */,
 				8AE67D431BA31A4700914E9F /* UITextField+YLEXT.m */,
+				8A26FA181BA848BF00F19F7F /* NSDate+YLEXT.h */,
+				8A26FA191BA848BF00F19F7F /* NSDate+YLEXT.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -743,6 +748,7 @@
 				8A7BC6B31BA1AC1100C455C7 /* YLAddTagToolBar.m in Sources */,
 				8A5053301B9756D6006AC6AF /* YLLoginRegisterViewController.m in Sources */,
 				8ACDFE1A1B9CAF1200A4991F /* UIImage+YLEXT.m in Sources */,
+				8A26FA1A1BA848BF00F19F7F /* NSDate+YLEXT.m in Sources */,
 				8AC8D12C1BA69B7100FB8698 /* YLVoiceViewController.m in Sources */,
 				8ACDFE291B9DD30E00A4991F /* YLSquare.m in Sources */,
 				8A7BC66D1BA08C6600C455C7 /* YLPostWordViewController.m in Sources */,
