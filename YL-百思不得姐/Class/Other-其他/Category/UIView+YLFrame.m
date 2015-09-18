@@ -10,6 +10,13 @@
 
 @implementation UIView (YLFrame)
 
++ (instancetype)viewFromXib
+{
+    
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].lastObject;
+}
+
+
 - (void)setX:(CGFloat)x
 {
     CGRect frame = self.frame;

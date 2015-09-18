@@ -6,8 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="193" id="KGk-i7-Jjw" customClass="YLTopicCell">
-            <rect key="frame" x="0.0" y="0.0" width="382" height="193"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="256" id="KGk-i7-Jjw" customClass="YLTopicCell">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="256"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -20,8 +20,8 @@
                             <constraint firstAttribute="height" constant="35" id="vfY-ji-uum"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jli-9f-fgb" userLabel="昵称">
-                        <rect key="frame" x="55" y="10" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jli-9f-fgb" userLabel="昵称">
+                        <rect key="frame" x="55" y="10" width="38" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -32,14 +32,14 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y3-Ni-3WP" userLabel="内容">
-                        <rect key="frame" x="10" y="55" width="362" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y3-Ni-3WP" userLabel="内容">
+                        <rect key="frame" x="10" y="55" width="387" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWI-D9-U1g">
-                        <rect key="frame" x="336" y="10" width="38" height="27"/>
+                        <rect key="frame" x="361" y="10" width="38" height="27"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="38" id="2DQ-rL-OWn"/>
                             <constraint firstAttribute="height" constant="27" id="nMN-5g-2Fm"/>
@@ -53,10 +53,10 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElO-2i-rQw" userLabel="底部工具条">
-                        <rect key="frame" x="0.0" y="157" width="382" height="35"/>
+                        <rect key="frame" x="0.0" y="220" width="407" height="35"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oh9-eu-S31">
-                                <rect key="frame" x="0.0" y="0.0" width="96" height="35"/>
+                                <rect key="frame" x="0.0" y="0.0" width="102" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -70,7 +70,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPx-u5-p6G" userLabel="分享">
-                                <rect key="frame" x="191" y="0.0" width="96" height="35"/>
+                                <rect key="frame" x="204" y="0.0" width="101" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -82,7 +82,7 @@
                                 <state key="highlighted" image="mainCellShareClick"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYg-pN-xpq" userLabel="评论">
-                                <rect key="frame" x="287" y="0.0" width="95" height="35"/>
+                                <rect key="frame" x="305" y="0.0" width="102" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -94,20 +94,20 @@
                                 <state key="highlighted" image="mainCellCommentClick"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="eUw-CF-rWY" userLabel="按钮分割线">
-                                <rect key="frame" x="96" y="0.0" width="1" height="35"/>
+                                <rect key="frame" x="102" y="0.0" width="1" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="Vq8-dO-CTI"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-xE-MlK" userLabel="按钮分割线">
-                                <rect key="frame" x="191" y="0.0" width="1" height="35"/>
+                                <rect key="frame" x="204" y="0.0" width="1" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="Y9X-sY-PKu"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1" id="Yue-ks-dzC"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="kbr-uA-Ge2" userLabel="按钮分割线">
-                                <rect key="frame" x="287" y="0.0" width="1" height="29"/>
+                                <rect key="frame" x="305" y="0.0" width="1" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1" id="Gne-Kb-L7l"/>
                                     <constraint firstAttribute="width" constant="1" id="VE0-O7-S2W"/>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVp-yU-L4n" userLabel="踩">
-                                <rect key="frame" x="96" y="0.0" width="95" height="35"/>
+                                <rect key="frame" x="102" y="0.0" width="102" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -194,7 +194,7 @@
                 <outlet property="repost_button" destination="fPx-u5-p6G" id="e9z-23-RgO"/>
                 <outlet property="text_label" destination="0Y3-Ni-3WP" id="2Z5-QP-l5g"/>
             </connections>
-            <point key="canvasLocation" x="210" y="270.5"/>
+            <point key="canvasLocation" x="222.5" y="302"/>
         </tableViewCell>
     </objects>
     <resources>

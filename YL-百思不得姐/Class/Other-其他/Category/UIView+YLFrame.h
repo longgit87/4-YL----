@@ -10,6 +10,8 @@
 
 @interface UIView (YLFrame)
 
++ (instancetype)viewFromXib;
+
 @property (nonatomic,assign)CGFloat x;
 @property (nonatomic,assign)CGFloat y;
 @property (nonatomic,assign)CGFloat width;

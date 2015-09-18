@@ -54,4 +54,63 @@
     
 }
 
+- (CGFloat)cellHeight
+{
+   
+    if (!_cellHeight) {
+        
+   
+    
+    _cellHeight = YLTextY;
+   
+    //计算文字内容高度
+    CGFloat textW = YLScreenW - 2 * YLCommonMargin;
+    CGSize textSize = CGSizeMake(textW, MAXFLOAT);
+    NSDictionary *attributes = @{NSFontAttributeName : [UIFont systemFontOfSize:15]};
+    CGFloat textH = [_text boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size.height;
+
+    _cellHeight += textH + YLCommonMargin;
+    //中间内容的高度
+    if (self.type != YLTopicTypeWord) {
+        
+        CGFloat contentW = textW;
+        
+        //图片的高度 * 内容的宽度 / 图片的宽度
+        CGFloat contentH = self.height * contentW / self.width;
+        
+        if (contentH > YLScreenH) {//图片高度超屏幕就定义为大图   设置高度为200
+            
+            contentH = 200;
+            
+            self.bigPicture = YES;//保存为 是大图！
+        }
+        
+        CGFloat contentX = YLCommonMargin;
+        CGFloat contentY =  _cellHeight;
+        
+        self.contentFrame = CGRectMake(contentX, contentY, contentW, contentH);
+        
+        _cellHeight += contentH + YLCommonMargin;
+        
+    }
+    
+        //不管有没图片都是要加底部工具条高度
+        _cellHeight += YLTopicToolBarH + YLCommonMargin;
+
+  }
+    return  _cellHeight;
+    
+}
+//- (CGFloat)textH
+//{
+//
+//    //计算文字内容高度
+//    CGSize textSize = CGSizeMake(YLScreenW - 2 * YLCommonMargin, MAXFLOAT);
+//    NSDictionary *attributes = @{NSFontAttributeName : [UIFont systemFontOfSize:15]};
+//    CGFloat textH = [_text boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size.height;
+//    
+//    _textH = textH;
+//    return _textH;
+//}
+
 @end

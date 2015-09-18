@@ -12,6 +12,7 @@
 #import <MJExtension.h>
 #import "YLTopic.h"
 #import "YLTopicCell.h"
+#import "YLTopicPictureView.h"
 
 @interface YLAllViewController ()
 /**
@@ -51,7 +52,7 @@ static NSString *ID = @"topicCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
 
     [self setuptable];
 
@@ -190,5 +191,11 @@ static NSString *ID = @"topicCell";
     //取消选中cell时的选中效果
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
+//计算cell高度会调用
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YLTopic *topic = self.topics[indexPath.row];
 
+    return topic.cellHeight;
+}
 @end

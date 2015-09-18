@@ -22,3 +22,9 @@ UIKIT_EXTERN CGFloat const YLTitleHeight;
 
 /**UITabBar的高度*/
 UIKIT_EXTERN CGFloat const YLTabBarHeight;
+
+/**帖子-文字内容的Y*/
+UIKIT_EXTERN CGFloat const YLTextY;
+
+/**帖子-底部工具条的高度*/
+UIKIT_EXTERN CGFloat const YLTopicToolBarH;

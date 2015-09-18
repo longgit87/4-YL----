@@ -8,6 +8,8 @@
 
 #import "YLTopicCell.h"
 #import "YLTopic.h"
+#import "YLTopicPictureView.h"
+
 
 
 @interface YLTopicCell ()
@@ -21,13 +23,33 @@
 @property (weak, nonatomic) IBOutlet UIButton *repost_button;
 @property (weak, nonatomic) IBOutlet UIButton *comment_button;
 
-
+@property (weak, nonatomic) YLTopicPictureView *topicPictureV;
 @end
 
 @implementation YLTopicCell
 
+- (YLTopicPictureView *)topicPictureV
+{
+    if (!_topicPictureV) {
+        
+        YLTopicPictureView *topicPictureV = [YLTopicPictureView viewFromXib];
+        [self.contentView addSubview:topicPictureV];
+        
+        _topicPictureV = topicPictureV;
+    }
 
-- (void)setTopic:(YLTopic *)topic
+    return _topicPictureV;
+
+}
+
+- (void)awakeFromNib
+{
+    //设置cell的背景图片
+    self.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+
+}
+
+- (void) setTopic:(YLTopic *)topic
 {
     _topic = topic;
     
@@ -46,9 +68,36 @@
     [self setupButtonTitle:self.cai_button number:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.repost_button number:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.comment_button number:topic.comment placeholder:@"评论"];
-
-
+    
+    
+    //根据帖子的内容决定中间内容
+    if (topic.type == YLTopicTypePicture) {//图片
+        
+        self.topicPictureV.hidden = NO;
+         self.topicPictureV.frame = self.topic.contentFrame;
+        self.topicPictureV.topic = topic;
+        
+    }else if (topic.type == YLTopicTypeVideo){//视频
+        self.topicPictureV.hidden = YES;
+        
+    }else if (topic.type == YLTopicTypeVoice){//声音
+         self.topicPictureV.hidden = YES;
+        
+    }else if (topic.type == YLTopicTypeWord){//文字
+         self.topicPictureV.hidden = YES;
+        
+    }
+    
+   
+   
 }
+//- (void)layoutSubviews
+//{
+//    [super layoutSubviews];
+//    self.topicPictureV.frame = self.topic.contentFrame;
+//    
+//}
+
 /**设置工具条按钮的文字*/
 - (void)setupButtonTitle:(UIButton *)button number:(NSInteger)number placeholder:(NSString *)placeholder
 {

@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YL-&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;/Class/Other-&#x5176;&#x4ed6;/Category/NSString+YLTimeAgo.m"

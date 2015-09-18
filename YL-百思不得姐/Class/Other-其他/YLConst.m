@@ -21,3 +21,12 @@ CGFloat const YLTitleHeight = 35;
 
 /**UITabBar的高度*/
 CGFloat const YLTabBarHeight = 49;
+
+/**帖子-文字内容的Y*/
+CGFloat const YLTextY = 55;//10+35+10
+
+/**帖子-底部工具条的高度*/
+CGFloat const YLTopicToolBarH = 35;
+
+
+
