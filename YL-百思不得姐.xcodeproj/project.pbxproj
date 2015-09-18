@@ -10,6 +10,8 @@
 		8A26FA1A1BA848BF00F19F7F /* NSDate+YLEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA191BA848BF00F19F7F /* NSDate+YLEXT.m */; };
 		8A26FA5E1BA9B64400F19F7F /* YLTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA5D1BA9B64400F19F7F /* YLTopicPictureView.m */; };
 		8A26FA641BA9E0F700F19F7F /* YLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA631BA9E0F700F19F7F /* YLTopicPictureView.xib */; };
+		8A26FA681BABC03500F19F7F /* YLSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */; };
+		8A26FA691BABC03500F19F7F /* YLSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */; };
 		8A4136CA1BA7B2AE0006AAA5 /* YLTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */; };
 		8A4136CC1BA7B5820006AAA5 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */; };
 		8A4136D01BA7C4960006AAA5 /* YLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CE1BA7C4960006AAA5 /* YLTopicCell.m */; };
@@ -88,6 +90,9 @@
 		8A26FA5C1BA9B64400F19F7F /* YLTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicPictureView.h; sourceTree = "<group>"; };
 		8A26FA5D1BA9B64400F19F7F /* YLTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicPictureView.m; sourceTree = "<group>"; };
 		8A26FA631BA9E0F700F19F7F /* YLTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicPictureView.xib; sourceTree = "<group>"; };
+		8A26FA651BABC03500F19F7F /* YLSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLSeeBigPictureViewController.xib; sourceTree = "<group>"; };
 		8A4136C81BA7B2AE0006AAA5 /* YLTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopic.h; sourceTree = "<group>"; };
 		8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopic.m; sourceTree = "<group>"; };
 		8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
@@ -375,6 +380,9 @@
 				8AC8D1251BA69AC300FB8698 /* YLPictureViewController.m */,
 				8AC8D1271BA69AFD00FB8698 /* YLWordViewController.h */,
 				8AC8D1281BA69AFD00FB8698 /* YLWordViewController.m */,
+				8A26FA651BABC03500F19F7F /* YLSeeBigPictureViewController.h */,
+				8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */,
+				8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -691,6 +699,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A26FA691BABC03500F19F7F /* YLSeeBigPictureViewController.xib in Resources */,
 				8A50532C1B974D61006AC6AF /* YLFriendTrendsViewController.xib in Resources */,
 				8A7BC6B71BA1AC7E00C455C7 /* YLAddTagToolBar.xib in Resources */,
 				8A5053311B9756D6006AC6AF /* YLLoginRegisterViewController.xib in Resources */,
@@ -797,6 +806,7 @@
 				8AB74FF01B96BA7200B5DAF1 /* main.m in Sources */,
 				8AB74FF31B96BD0E00B5DAF1 /* YLNavigationControl.m in Sources */,
 				8AC8D1291BA69AFD00FB8698 /* YLWordViewController.m in Sources */,
+				8A26FA681BABC03500F19F7F /* YLSeeBigPictureViewController.m in Sources */,
 				8A4136D01BA7C4960006AAA5 /* YLTopicCell.m in Sources */,
 				8AC8D1121BA3CDA500FB8698 /* YLTagButton.m in Sources */,
 				8A5754FE1B9816E100F6F98D /* YLQuickLoginButton.m in Sources */,

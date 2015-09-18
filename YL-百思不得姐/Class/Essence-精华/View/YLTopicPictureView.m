@@ -10,6 +10,7 @@
 #import "YLTopic.h"
 #import <UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
+#import "YLSeeBigPictureViewController.h"
 @interface YLTopicPictureView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
@@ -19,23 +20,40 @@
 @end
 
 @implementation YLTopicPictureView
-//- (DACircularProgressView *)progressView
-//{
-//    if (!_progressView) {
-//        
-//       DACircularProgressView *progressView = [[DACircularProgressView alloc]init];
-//        _progressView = progressView;
-//    }
-//
-//    return _progressView;
-//}
 
 - (void)awakeFromNib
 {
     // 清空自动伸缩属性
     self.autoresizingMask = UIViewAutoresizingNone;
-
+    //设置进度条一些属性
+    self.imageView.clipsToBounds = YES;
+    self.progressView.roundedCorners = 5;
+    self.progressView.progressLabel.textColor = [UIColor whiteColor];
+    //添加点击图片事件
+    self.imageView.userInteractionEnabled = YES;
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickImageView)]];
+    
+    
 }
+/**点击了图片*/
+- (void)clickImageView
+{
+    if (self.imageView.image == nil) return;
+    
+    YLSeeBigPictureViewController *seeBigPictureVc = [[YLSeeBigPictureViewController alloc]init];
+
+    seeBigPictureVc.topic = self.topic;
+    
+    
+    [self.window.rootViewController presentViewController:seeBigPictureVc animated:NO completion:^{
+        
+        
+    }];
+    
+    
+    
+}
+
 - (void)setTopic:(YLTopic *)topic
 {
 
@@ -46,11 +64,11 @@
     //下载图片
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
 
-        //没下载一点图片数据，就会调一次这个block
+        //每下载一点图片数据，就会调一次这个block
         weakSelf.progressView.hidden = NO;
-        weakSelf.imageView.clipsToBounds = YES;
+       
         weakSelf.progressView.progress = 1.0 * receivedSize / expectedSize;
-        weakSelf.progressView.roundedCorners = 5;
+        
         weakSelf.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0f%%",weakSelf.progressView.progress * 100];
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
@@ -72,11 +90,10 @@
     }else{
     
         self.imageView.contentMode = UIViewContentModeScaleToFill;
+        self.imageView.clipsToBounds = NO;
     }
         
 }
-
-
 
 - (IBAction)clickSeeBigPicture {
     
