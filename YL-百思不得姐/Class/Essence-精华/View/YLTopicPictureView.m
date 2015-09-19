@@ -62,7 +62,7 @@
 
     YLWeadSelf;
     //下载图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
 
         //每下载一点图片数据，就会调一次这个block
         weakSelf.progressView.hidden = NO;

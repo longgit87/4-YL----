@@ -7,12 +7,25 @@
 //
 
 #import "YLVideoViewController.h"
+#import <AFNetworking.h>
 
 @interface YLVideoViewController ()
+@property (strong, nonatomic) AFHTTPSessionManager *manager;
+
 
 @end
 
 @implementation YLVideoViewController
+
+- (AFHTTPSessionManager *)manager
+{
+
+    if (!_manager) {
+        
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -12,6 +12,10 @@
 		8A26FA641BA9E0F700F19F7F /* YLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA631BA9E0F700F19F7F /* YLTopicPictureView.xib */; };
 		8A26FA681BABC03500F19F7F /* YLSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */; };
 		8A26FA691BABC03500F19F7F /* YLSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */; };
+		8A26FA6C1BAC344400F19F7F /* YLTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA6B1BAC344400F19F7F /* YLTopicVideoView.m */; };
+		8A26FA6E1BAC345F00F19F7F /* YLTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA6D1BAC345F00F19F7F /* YLTopicVideoView.xib */; };
+		8A26FA711BAC561E00F19F7F /* YLTopicVioceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA701BAC561E00F19F7F /* YLTopicVioceView.m */; };
+		8A26FA731BAC562A00F19F7F /* YLTopicVioceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA721BAC562A00F19F7F /* YLTopicVioceView.xib */; };
 		8A4136CA1BA7B2AE0006AAA5 /* YLTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */; };
 		8A4136CC1BA7B5820006AAA5 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */; };
 		8A4136D01BA7C4960006AAA5 /* YLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CE1BA7C4960006AAA5 /* YLTopicCell.m */; };
@@ -93,6 +97,12 @@
 		8A26FA651BABC03500F19F7F /* YLSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSeeBigPictureViewController.h; sourceTree = "<group>"; };
 		8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSeeBigPictureViewController.m; sourceTree = "<group>"; };
 		8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLSeeBigPictureViewController.xib; sourceTree = "<group>"; };
+		8A26FA6A1BAC344400F19F7F /* YLTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicVideoView.h; sourceTree = "<group>"; };
+		8A26FA6B1BAC344400F19F7F /* YLTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicVideoView.m; sourceTree = "<group>"; };
+		8A26FA6D1BAC345F00F19F7F /* YLTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicVideoView.xib; sourceTree = "<group>"; };
+		8A26FA6F1BAC561E00F19F7F /* YLTopicVioceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicVioceView.h; sourceTree = "<group>"; };
+		8A26FA701BAC561E00F19F7F /* YLTopicVioceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicVioceView.m; sourceTree = "<group>"; };
+		8A26FA721BAC562A00F19F7F /* YLTopicVioceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicVioceView.xib; sourceTree = "<group>"; };
 		8A4136C81BA7B2AE0006AAA5 /* YLTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopic.h; sourceTree = "<group>"; };
 		8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopic.m; sourceTree = "<group>"; };
 		8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
@@ -412,6 +422,12 @@
 				8A26FA5C1BA9B64400F19F7F /* YLTopicPictureView.h */,
 				8A26FA5D1BA9B64400F19F7F /* YLTopicPictureView.m */,
 				8A26FA631BA9E0F700F19F7F /* YLTopicPictureView.xib */,
+				8A26FA6A1BAC344400F19F7F /* YLTopicVideoView.h */,
+				8A26FA6B1BAC344400F19F7F /* YLTopicVideoView.m */,
+				8A26FA6D1BAC345F00F19F7F /* YLTopicVideoView.xib */,
+				8A26FA6F1BAC561E00F19F7F /* YLTopicVioceView.h */,
+				8A26FA701BAC561E00F19F7F /* YLTopicVioceView.m */,
+				8A26FA721BAC562A00F19F7F /* YLTopicVioceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -702,7 +718,9 @@
 				8A26FA691BABC03500F19F7F /* YLSeeBigPictureViewController.xib in Resources */,
 				8A50532C1B974D61006AC6AF /* YLFriendTrendsViewController.xib in Resources */,
 				8A7BC6B71BA1AC7E00C455C7 /* YLAddTagToolBar.xib in Resources */,
+				8A26FA6E1BAC345F00F19F7F /* YLTopicVideoView.xib in Resources */,
 				8A5053311B9756D6006AC6AF /* YLLoginRegisterViewController.xib in Resources */,
+				8A26FA731BAC562A00F19F7F /* YLTopicVioceView.xib in Resources */,
 				8A7BC6671B9FF0E900C455C7 /* YLPublicViewController.xib in Resources */,
 				8ACDFE401B9EA3C800A4991F /* YLWebViewController.xib in Resources */,
 				8A4136D11BA7C4960006AAA5 /* YLTopicCell.xib in Resources */,
@@ -778,6 +796,7 @@
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
 				8AC8D11A1BA5CABD00FB8698 /* YLTitleButton.m in Sources */,
 				8A7BC66A1BA04B7A00C455C7 /* YLPublicButton.m in Sources */,
+				8A26FA711BAC561E00F19F7F /* YLTopicVioceView.m in Sources */,
 				8A26FA5E1BA9B64400F19F7F /* YLTopicPictureView.m in Sources */,
 				8AC8D1151BA53C4D00FB8698 /* YLTextField.m in Sources */,
 				8ACDFE1D1B9D651500A4991F /* UIImageView+YLEXT.m in Sources */,
@@ -787,6 +806,7 @@
 				8ACDFE461B9EB6D800A4991F /* YLClearCacheCell.m in Sources */,
 				8AE67D441BA31A4700914E9F /* UITextField+YLEXT.m in Sources */,
 				8A7BC6701BA127E800C455C7 /* YLPlaceholderTextView.m in Sources */,
+				8A26FA6C1BAC344400F19F7F /* YLTopicVideoView.m in Sources */,
 				8A4136CA1BA7B2AE0006AAA5 /* YLTopic.m in Sources */,
 				8AE67D3D1BA3071000914E9F /* YLPublicViewController.m in Sources */,
 				8ACDFE491B9ED89700A4991F /* YLThirdCell.m in Sources */,

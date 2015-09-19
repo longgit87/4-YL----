@@ -21,6 +21,8 @@ typedef  enum {
 } YLTopicType;
 
 @interface YLTopic : NSObject
+/**id*/
+@property (nonatomic, copy) NSString *ID;//id;
 /**昵称*/
 @property (nonatomic, copy) NSString *name;
 /**头像*/
@@ -45,11 +47,21 @@ typedef  enum {
 @property (nonatomic,assign) YLTopicType type;
 
 /** 小图 */
-@property (nonatomic, copy) NSString *image0;
+@property (nonatomic, copy) NSString *small_image;//image0;
 /** 大图 */
-@property (nonatomic, copy) NSString *image1;
+@property (nonatomic, copy) NSString *large_image;//image1;
 /** 中图 */
-@property (nonatomic, copy) NSString *image2;
+@property (nonatomic, copy) NSString *middle_image;//image2;
+
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 视频时长 */
+@property (nonatomic, assign) NSInteger videotime;
+/** 音频时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+
+
+
 
 /** 是否为动态图 */
 @property (nonatomic, assign) BOOL is_gif;

@@ -7,9 +7,21 @@
 //
 
 #import "YLTopic.h"
+#import <MJExtension.h>
 
 
 @implementation YLTopic
+
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+
+    return @{
+        @"small_image":@"image0",
+        @"large_iamge":@"image1",
+        @"middle_image":@"image2",
+        @"ID":@"id"
+    };
+}
 
 - (NSString *)created_at
 {
@@ -58,8 +70,6 @@
 {
    
     if (!_cellHeight) {
-        
-   
     
     _cellHeight = YLTextY;
    
@@ -101,16 +111,6 @@
     return  _cellHeight;
     
 }
-//- (CGFloat)textH
-//{
-//
-//    //计算文字内容高度
-//    CGSize textSize = CGSizeMake(YLScreenW - 2 * YLCommonMargin, MAXFLOAT);
-//    NSDictionary *attributes = @{NSFontAttributeName : [UIFont systemFontOfSize:15]};
-//    CGFloat textH = [_text boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size.height;
-//    
-//    _textH = textH;
-//    return _textH;
-//}
+
 
 @end

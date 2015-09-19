@@ -9,6 +9,8 @@
 #import "YLTopicCell.h"
 #import "YLTopic.h"
 #import "YLTopicPictureView.h"
+#import "YLTopicVideoView.h"
+#import "YLTopicVioceView.h"
 
 
 
@@ -24,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *comment_button;
 
 @property (weak, nonatomic) YLTopicPictureView *topicPictureV;
+@property (weak, nonatomic) YLTopicVideoView *topicVideoV;
+@property (weak, nonatomic) YLTopicVioceView *topVoiceV;
 @end
 
 @implementation YLTopicCell
@@ -41,11 +45,37 @@
     return _topicPictureV;
 
 }
+- (YLTopicVideoView *)topicVideoV
+{
+    if (!_topicVideoV) {
+        
+        YLTopicVideoView *topicVideoV = [YLTopicVideoView viewFromXib];
+        [self.contentView addSubview:topicVideoV];
+        _topicVideoV = topicVideoV;
+        
+    }
+    return _topicVideoV;
+    
+}
+- (YLTopicVioceView *)topVoiceV
+{
+    if (!_topVoiceV) {
+        
+        YLTopicVioceView *topVoiceV = [YLTopicVioceView viewFromXib];
+        [self.contentView addSubview:topVoiceV];
+        _topVoiceV = topVoiceV;
+        
+    }
+    return _topVoiceV;
+
+}
+
 
 - (void)awakeFromNib
 {
     //设置cell的背景图片
     self.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+    self.autoresizingMask = UIViewAutoresizingNone;
 
 }
 
@@ -74,29 +104,36 @@
     if (topic.type == YLTopicTypePicture) {//图片
         
         self.topicPictureV.hidden = NO;
-         self.topicPictureV.frame = self.topic.contentFrame;
+        self.topicPictureV.frame = self.topic.contentFrame;
         self.topicPictureV.topic = topic;
+        self.topicVideoV.hidden = YES;
+        self.topVoiceV.hidden = YES;
         
     }else if (topic.type == YLTopicTypeVideo){//视频
+        self.topicVideoV.hidden = NO;
+        self.topicVideoV.frame = self.topic.contentFrame;
+        self.topicVideoV.topic = topic;
         self.topicPictureV.hidden = YES;
+        self.topVoiceV.hidden = YES;
         
     }else if (topic.type == YLTopicTypeVoice){//声音
-         self.topicPictureV.hidden = YES;
+        self.topVoiceV.hidden = NO;
+        self.topVoiceV.frame = topic.contentFrame;
+        self.topVoiceV.topic = topic;
+        self.topicPictureV.hidden = YES;
+        self.topicVideoV.hidden = YES;
         
     }else if (topic.type == YLTopicTypeWord){//文字
-         self.topicPictureV.hidden = YES;
+        self.topicPictureV.hidden = YES;
+        self.topicVideoV.hidden = YES;
+        self.topVoiceV.hidden = YES;
         
     }
     
    
    
 }
-//- (void)layoutSubviews
-//{
-//    [super layoutSubviews];
-//    self.topicPictureV.frame = self.topic.contentFrame;
-//    
-//}
+
 
 /**设置工具条按钮的文字*/
 - (void)setupButtonTitle:(UIButton *)button number:(NSInteger)number placeholder:(NSString *)placeholder
