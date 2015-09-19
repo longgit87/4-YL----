@@ -8,6 +8,8 @@
 
 #import "YLTopic.h"
 #import <MJExtension.h>
+#import "YLComment.h"
+#import "YLUser.h"
 
 
 @implementation YLTopic
@@ -19,8 +21,16 @@
         @"small_image":@"image0",
         @"large_image":@"image1",
         @"middle_image":@"image2",
-        @"ID":@"id"
+        @"ID":@"id",
+        @"topComment":@"top_cmt[0]",
     };
+}
+
++ (NSDictionary *)objectClassInArray
+{
+    return @{//数组名   ：  模型名
+             @"top_cmt":@"YLComment"
+             };
 }
 
 - (NSString *)created_at
@@ -51,11 +61,11 @@
                 return @"刚刚";
             }
         }else if (createdData.isYesterday){// 昨天
-            formatter.dateFormat = @"昨天 HH-mm-ss";
+            formatter.dateFormat = @"昨天 HH:mm:ss";
             return [formatter stringFromDate:createdData];
         
         }else{// 今年的其他时间
-            formatter.dateFormat = @"MM-dd HH-mm-ss";
+            formatter.dateFormat = @"MM-dd HH:mm:ss";
             return [formatter stringFromDate:createdData];
         }
         
@@ -105,10 +115,10 @@
     }
     
         //最热评论
-        NSDictionary *cmt = self.top_cmt.firstObject;
-        if (cmt) {
-            NSString *userName = cmt[@"user"][@"username"];
-            NSString *topContent = cmt[@"content"];
+       
+        if (self.topComment) {
+            NSString *userName = self.topComment.user.username;
+            NSString *topContent = self.topComment.content;
             NSString *cmtText = [NSString stringWithFormat:@"%@ : %@",userName,topContent];
             
             //文字内容高度

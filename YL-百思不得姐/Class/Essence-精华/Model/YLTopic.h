@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+@class YLComment;
+
 
 typedef  enum {
     /** 图片 */
@@ -59,8 +61,8 @@ typedef  enum {
 @property (nonatomic, assign) NSInteger videotime;
 /** 音频时长 */
 @property (nonatomic, assign) NSInteger voicetime;
-/** 最热评论 */
-@property (nonatomic, copy) NSArray *top_cmt;
+/** 最热评论 (这个数组中存放的应该是YLComment模型)*/
+@property (nonatomic, strong) YLComment *topComment;
 
 
 

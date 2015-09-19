@@ -11,6 +11,8 @@
 #import "YLTopicPictureView.h"
 #import "YLTopicVideoView.h"
 #import "YLTopicVioceView.h"
+#import "YLComment.h"
+#import "YLUser.h"
 
 
 
@@ -139,11 +141,11 @@
     }
     
     //最热评论
-    NSDictionary *cmtDict = topic.top_cmt.lastObject;
-    if (cmtDict) {
+
+    if (topic.topComment) {
         self.topCmt_view.hidden = NO;
-        NSString *userName = cmtDict[@"user"][@"username"];
-        NSString *content = cmtDict[@"content"];
+        NSString *userName = topic.topComment.user.username;
+        NSString *content = topic.topComment.content;
         self.topCmt_label.text = [NSString stringWithFormat:@"%@ : %@",userName,content];
         
     }else{
