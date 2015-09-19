@@ -25,9 +25,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *repost_button;
 @property (weak, nonatomic) IBOutlet UIButton *comment_button;
 
+/** 图片 */
 @property (weak, nonatomic) YLTopicPictureView *topicPictureV;
+/** 视频 */
 @property (weak, nonatomic) YLTopicVideoView *topicVideoV;
+/** 声音 */
 @property (weak, nonatomic) YLTopicVioceView *topVoiceV;
+/** 最热评论-整体 */
+@property (weak, nonatomic) IBOutlet UIView *topCmt_view;
+/** 最热评论-内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmt_label;
 @end
 
 @implementation YLTopicCell
@@ -91,6 +98,7 @@
     self.createAt_label.text = topic.created_at;
     //内容
     self.text_label.text = topic.text;
+    
 
     
     //设置底部工具条数据
@@ -130,7 +138,18 @@
         
     }
     
-   
+    //最热评论
+    NSDictionary *cmtDict = topic.top_cmt.lastObject;
+    if (cmtDict) {
+        self.topCmt_view.hidden = NO;
+        NSString *userName = cmtDict[@"user"][@"username"];
+        NSString *content = cmtDict[@"content"];
+        self.topCmt_label.text = [NSString stringWithFormat:@"%@ : %@",userName,content];
+        
+    }else{
+        self.topCmt_view.hidden = YES;
+    }
+
    
 }
 
@@ -151,7 +170,7 @@
      
         [button setTitle:placeholder forState:UIControlStateNormal];
     }
-   
+
 }
 
 - (void)setFrame:(CGRect)frame

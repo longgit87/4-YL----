@@ -17,7 +17,7 @@
 
     return @{
         @"small_image":@"image0",
-        @"large_iamge":@"image1",
+        @"large_image":@"image1",
         @"middle_image":@"image2",
         @"ID":@"id"
     };
@@ -104,10 +104,25 @@
         
     }
     
+        //最热评论
+        NSDictionary *cmt = self.top_cmt.firstObject;
+        if (cmt) {
+            NSString *userName = cmt[@"user"][@"username"];
+            NSString *topContent = cmt[@"content"];
+            NSString *cmtText = [NSString stringWithFormat:@"%@ : %@",userName,topContent];
+            
+            //文字内容高度
+            CGFloat topCmtContentH = [cmtText boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+            
+            _cellHeight += YLTopCmtTitleH + topCmtContentH + YLCommonMargin;
+        }
+        
         //不管有没图片都是要加底部工具条高度
         _cellHeight += YLTopicToolBarH + YLCommonMargin;
 
   }
+    
+    
     return  _cellHeight;
     
 }

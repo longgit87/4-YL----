@@ -28,5 +28,7 @@ CGFloat const YLTextY = 55;//10+35+10
 /**帖子-底部工具条的高度*/
 CGFloat const YLTopicToolBarH = 35;
 
+/**帖子-最热评论标题高度*/
+CGFloat const YLTopCmtTitleH = 20;
 
 

@@ -59,7 +59,8 @@ typedef  enum {
 @property (nonatomic, assign) NSInteger videotime;
 /** 音频时长 */
 @property (nonatomic, assign) NSInteger voicetime;
-
+/** 最热评论 */
+@property (nonatomic, copy) NSArray *top_cmt;
 
 
 
