@@ -14,7 +14,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="365" height="255"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3C-ZH-hcI" userLabel="播放按钮">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3C-ZH-hcI" userLabel="播放按钮">
                     <rect key="frame" x="147" y="92" width="71" height="71"/>
                     <state key="normal" image="playButtonPlay" backgroundImage="playButton">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,6 +60,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="imageView" destination="3qf-hG-rHa" id="MwE-Sr-BQh"/>
                 <outlet property="playCount_label" destination="jbc-kF-FH7" id="dUe-iO-Ea1"/>
                 <outlet property="vocieTime_label" destination="PjY-uL-6DR" id="bdF-hq-TzZ"/>
             </connections>

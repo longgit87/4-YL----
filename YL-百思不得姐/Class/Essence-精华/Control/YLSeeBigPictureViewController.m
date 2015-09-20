@@ -33,6 +33,7 @@
 
     //图片
     UIImageView *imageView = [[UIImageView alloc]init];
+
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
     [scrollView addSubview:imageView];
     self.imageView = imageView;
@@ -43,7 +44,7 @@
     //图片原来高度 * 图片缩放后宽度  / 图片原来的宽度 = 图片缩放后的高度
     imageView.height = self.topic.height * YLScreenW / self.topic.width;
     
-    if (self.topic.height > YLScreenH) {//图片大于屏幕高度
+    if (imageView.height > YLScreenH) {//图片大于屏幕高度
         imageView.y = 0;
         scrollView.contentSize = CGSizeMake(0, imageView.height);
         
@@ -63,10 +64,7 @@
     
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
     
-//    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
-//    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-//    [self presentViewController:picker animated:YES completion:nil];
-//    
+    
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
@@ -86,6 +84,7 @@
         
     }];
 }
+
 #pragma mark - UIScrollViewDelegate
 //缩放scrollView内部的哪个控件
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView

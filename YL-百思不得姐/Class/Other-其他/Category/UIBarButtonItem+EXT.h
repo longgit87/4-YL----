@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIBarButtonItem (EXT)
-/**创建导航栏左边按钮*/
+/**创建导航栏按钮*/
 + (instancetype)itemWithimage:(NSString *)image hightImage:(NSString *)hightImage target:(id)target action:(SEL)action;
 
 @end

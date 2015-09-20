@@ -18,6 +18,10 @@
 		8A26FA731BAC562A00F19F7F /* YLTopicVioceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA721BAC562A00F19F7F /* YLTopicVioceView.xib */; };
 		8A26FA761BAD43D500F19F7F /* YLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA751BAD43D500F19F7F /* YLComment.m */; };
 		8A26FA791BAD463C00F19F7F /* YLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA781BAD463C00F19F7F /* YLUser.m */; };
+		8A26FA821BAD984D00F19F7F /* YLCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA801BAD984D00F19F7F /* YLCommentViewController.m */; };
+		8A26FA831BAD984D00F19F7F /* YLCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA811BAD984D00F19F7F /* YLCommentViewController.xib */; };
+		8A26FA871BADB60C00F19F7F /* YLCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA851BADB60C00F19F7F /* YLCommentCell.m */; };
+		8A26FA881BADB60C00F19F7F /* YLCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA861BADB60C00F19F7F /* YLCommentCell.xib */; };
 		8A4136CA1BA7B2AE0006AAA5 /* YLTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */; };
 		8A4136CC1BA7B5820006AAA5 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */; };
 		8A4136D01BA7C4960006AAA5 /* YLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CE1BA7C4960006AAA5 /* YLTopicCell.m */; };
@@ -109,6 +113,12 @@
 		8A26FA751BAD43D500F19F7F /* YLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLComment.m; sourceTree = "<group>"; };
 		8A26FA771BAD463C00F19F7F /* YLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLUser.h; sourceTree = "<group>"; };
 		8A26FA781BAD463C00F19F7F /* YLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLUser.m; sourceTree = "<group>"; };
+		8A26FA7F1BAD984D00F19F7F /* YLCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCommentViewController.h; sourceTree = "<group>"; };
+		8A26FA801BAD984D00F19F7F /* YLCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCommentViewController.m; sourceTree = "<group>"; };
+		8A26FA811BAD984D00F19F7F /* YLCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLCommentViewController.xib; sourceTree = "<group>"; };
+		8A26FA841BADB60C00F19F7F /* YLCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCommentCell.h; sourceTree = "<group>"; };
+		8A26FA851BADB60C00F19F7F /* YLCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCommentCell.m; sourceTree = "<group>"; };
+		8A26FA861BADB60C00F19F7F /* YLCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLCommentCell.xib; sourceTree = "<group>"; };
 		8A4136C81BA7B2AE0006AAA5 /* YLTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopic.h; sourceTree = "<group>"; };
 		8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopic.m; sourceTree = "<group>"; };
 		8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
@@ -303,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				8AB74FBA1B96BA7200B5DAF1 /* Class */,
+				8AB74F721B9551F900B5DAF1 /* Supporting Files */,
 				8AB74F711B9551F900B5DAF1 /* YL-百思不得姐 */,
 				8AB74F8B1B9551F900B5DAF1 /* YL-百思不得姐Tests */,
 				8AB74F701B9551F900B5DAF1 /* Products */,
@@ -323,7 +334,6 @@
 		8AB74F711B9551F900B5DAF1 /* YL-百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				8AB74F721B9551F900B5DAF1 /* Supporting Files */,
 			);
 			path = "YL-百思不得姐";
 			sourceTree = "<group>";
@@ -336,6 +346,7 @@
 				8AB74F731B9551F900B5DAF1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = "YL-百思不得姐";
 			sourceTree = "<group>";
 		};
 		8AB74F8B1B9551F900B5DAF1 /* YL-百思不得姐Tests */ = {
@@ -399,6 +410,9 @@
 				8A26FA651BABC03500F19F7F /* YLSeeBigPictureViewController.h */,
 				8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */,
 				8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */,
+				8A26FA7F1BAD984D00F19F7F /* YLCommentViewController.h */,
+				8A26FA801BAD984D00F19F7F /* YLCommentViewController.m */,
+				8A26FA811BAD984D00F19F7F /* YLCommentViewController.xib */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -438,6 +452,9 @@
 				8A26FA6F1BAC561E00F19F7F /* YLTopicVioceView.h */,
 				8A26FA701BAC561E00F19F7F /* YLTopicVioceView.m */,
 				8A26FA721BAC562A00F19F7F /* YLTopicVioceView.xib */,
+				8A26FA841BADB60C00F19F7F /* YLCommentCell.h */,
+				8A26FA851BADB60C00F19F7F /* YLCommentCell.m */,
+				8A26FA861BADB60C00F19F7F /* YLCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -728,6 +745,7 @@
 				8A26FA691BABC03500F19F7F /* YLSeeBigPictureViewController.xib in Resources */,
 				8A50532C1B974D61006AC6AF /* YLFriendTrendsViewController.xib in Resources */,
 				8A7BC6B71BA1AC7E00C455C7 /* YLAddTagToolBar.xib in Resources */,
+				8A26FA881BADB60C00F19F7F /* YLCommentCell.xib in Resources */,
 				8A26FA6E1BAC345F00F19F7F /* YLTopicVideoView.xib in Resources */,
 				8A5053311B9756D6006AC6AF /* YLLoginRegisterViewController.xib in Resources */,
 				8A26FA731BAC562A00F19F7F /* YLTopicVioceView.xib in Resources */,
@@ -736,6 +754,7 @@
 				8A4136D11BA7C4960006AAA5 /* YLTopicCell.xib in Resources */,
 				8A57553B1B997FC300F6F98D /* YLGuideView.xib in Resources */,
 				8AB74F801B9551F900B5DAF1 /* Images.xcassets in Resources */,
+				8A26FA831BAD984D00F19F7F /* YLCommentViewController.xib in Resources */,
 				8A26FA641BA9E0F700F19F7F /* YLTopicPictureView.xib in Resources */,
 				8ACDFE0C1B9C553800A4991F /* YLTagCell.xib in Resources */,
 			);
@@ -795,6 +814,7 @@
 				8A5053301B9756D6006AC6AF /* YLLoginRegisterViewController.m in Sources */,
 				8ACDFE1A1B9CAF1200A4991F /* UIImage+YLEXT.m in Sources */,
 				8A26FA1A1BA848BF00F19F7F /* NSDate+YLEXT.m in Sources */,
+				8A26FA871BADB60C00F19F7F /* YLCommentCell.m in Sources */,
 				8AC8D12C1BA69B7100FB8698 /* YLVoiceViewController.m in Sources */,
 				8ACDFE291B9DD30E00A4991F /* YLSquare.m in Sources */,
 				8A7BC66D1BA08C6600C455C7 /* YLPostWordViewController.m in Sources */,
@@ -807,6 +827,7 @@
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
 				8AC8D11A1BA5CABD00FB8698 /* YLTitleButton.m in Sources */,
 				8A7BC66A1BA04B7A00C455C7 /* YLPublicButton.m in Sources */,
+				8A26FA821BAD984D00F19F7F /* YLCommentViewController.m in Sources */,
 				8A26FA711BAC561E00F19F7F /* YLTopicVioceView.m in Sources */,
 				8A26FA5E1BA9B64400F19F7F /* YLTopicPictureView.m in Sources */,
 				8AC8D1151BA53C4D00FB8698 /* YLTextField.m in Sources */,

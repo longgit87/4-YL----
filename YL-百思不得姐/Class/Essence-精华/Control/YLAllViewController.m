@@ -13,6 +13,7 @@
 #import "YLTopic.h"
 #import "YLTopicCell.h"
 #import "YLTopicPictureView.h"
+#import "YLCommentViewController.h"
 
 @interface YLAllViewController ()
 /**
@@ -68,7 +69,6 @@ static NSString *ID = @"topicCell";
     //设置右边滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 
-    self.tableView.rowHeight = 300;
     //注册cell
     [self.tableView registerNib: [UINib nibWithNibName:NSStringFromClass([YLTopicCell class]) bundle:nil] forCellReuseIdentifier:ID];
     
@@ -106,7 +106,7 @@ static NSString *ID = @"topicCell";
 
     YLWeadSelf;
     [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *tast, id responseObject) {
-     //  YLWriteToPlist(responseObject, @"topics");
+//       YLWriteToPlist(responseObject, @"topics");
         
         
         //字典转模型
@@ -190,6 +190,12 @@ static NSString *ID = @"topicCell";
 {
     //取消选中cell时的选中效果
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    YLCommentViewController *commentVc = [[YLCommentViewController alloc]init];
+
+    commentVc.topic = self.topics[indexPath.row];
+    
+    [self.navigationController pushViewController:commentVc animated:YES];
 }
 //计算cell高度会调用
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -45,10 +45,7 @@
     seeBigPictureVc.topic = self.topic;
     
     
-    [self.window.rootViewController presentViewController:seeBigPictureVc animated:NO completion:^{
-        
-        
-    }];
+    [self.window.rootViewController presentViewController:seeBigPictureVc animated:YES completion:nil];
     
     
     

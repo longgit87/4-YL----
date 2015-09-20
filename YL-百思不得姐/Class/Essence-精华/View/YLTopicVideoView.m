@@ -9,6 +9,7 @@
 #import "YLTopicVideoView.h"
 #import "YLTopic.h"
 #import <UIImageView+WebCache.h>
+#import "YLSeeBigPictureViewController.h"
 
 @interface YLTopicVideoView ()
 
@@ -25,12 +26,25 @@
 {
     self.autoresizingMask = UIViewAutoresizingNone;
     
+    self.imageView.userInteractionEnabled = YES;
     
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickImage)]];
    
     
     
 
 }
+- (void)clickImage
+{
+//    if (self.imageView.image == nil) return;
+    YLSeeBigPictureViewController *seeBigPictureVc = [[YLSeeBigPictureViewController alloc]init];
+    seeBigPictureVc.topic = self.topic;
+    
+    [self.window.rootViewController presentViewController:seeBigPictureVc animated:YES completion:nil];
+
+
+}
+
 
 - (void)setTopic:(YLTopic *)topic
 {
