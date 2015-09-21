@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 @class YLUser;
 @interface YLComment : NSObject
+/** id */
+@property (nonatomic, copy) NSString *ID;
 /** 文字内容 */
 @property (nonatomic, copy) NSString *content;
 /** YLUser模型 */

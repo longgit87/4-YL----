@@ -7,11 +7,15 @@
 //
 
 #import "YLComment.h"
-//#import "YLUser.h"
+#import <MJExtension.h>
 
 
 
 @implementation YLComment
 
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{@"ID":@"id"};
+}
 
 @end

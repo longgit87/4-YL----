@@ -46,7 +46,7 @@ static NSString *ID = @"comment";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     
     self.view.autoresizingMask = UIViewAutoresizingNone;
   
@@ -87,9 +87,15 @@ static NSString *ID = @"comment";
         [weakSelf.tableView reloadData];
         //停止刷新
         [weakSelf.tableView.header endRefreshing];
+        
+        //已经加载完毕
+        if (self.latestComments.count >= [responseObject[@"total"] integerValue]){
+        
+            self.tableView.footer.hidden = YES;
+        }
 
     } failure:^ void(NSURLSessionDataTask *task, NSError *error) {
-        
+        //结束刷新
         [weakSelf.tableView.header endRefreshing];
     }];
 }
@@ -97,6 +103,46 @@ static NSString *ID = @"comment";
 - (void)loadMoreComments
 {
 
+    //取消所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    YLWeadSelf;
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"dataList";
+    parameters[@"c"] = @"comment";
+    parameters[@"data_id"] = self.topic.ID;
+    parameters[@"lastcid"] = [self.latestComments.lastObject ID];
+
+    [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *task , id responseObject) {
+       
+        //获取请求到的下一页数据
+        NSArray *newComments = [YLComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        //添加到最新评论数组
+        [weakSelf.latestComments addObjectsFromArray:newComments];
+        
+        //刷新表格
+        [weakSelf.tableView reloadData];
+        
+        //判断是否已经加载完全
+        if (self.latestComments.count >= [responseObject[@"total"] intValue]) {
+            //已经加载完毕
+            weakSelf.tableView.footer.hidden = YES;
+            weakSelf.tableView.footer = nil;
+            [self.tableView reloadData];
+        }else{//应该还会有下一页
+            
+            // 结束刷新(恢复到普通状态，仍旧可以继续刷新)
+            [weakSelf.tableView.footer endRefreshing];
+        }
+        
+        
+    } failure:^ void(NSURLSessionDataTask * task, NSError * error) {
+        
+        //结束刷新
+        [weakSelf.tableView.footer endRefreshing];
+        
+    }];
     
 
 }
@@ -117,6 +163,7 @@ static NSString *ID = @"comment";
     //自动调整cell的高度
     self.tableView.estimatedRowHeight = 100;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     
     //设置headView
     YLTopicCell  *cellView = [YLTopicCell viewFromXib];
