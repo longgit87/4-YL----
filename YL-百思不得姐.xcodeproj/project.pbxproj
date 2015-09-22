@@ -8,18 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8A26FA1A1BA848BF00F19F7F /* NSDate+YLEXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA191BA848BF00F19F7F /* NSDate+YLEXT.m */; };
-		8A26FA5E1BA9B64400F19F7F /* YLTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA5D1BA9B64400F19F7F /* YLTopicPictureView.m */; };
-		8A26FA641BA9E0F700F19F7F /* YLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA631BA9E0F700F19F7F /* YLTopicPictureView.xib */; };
-		8A26FA681BABC03500F19F7F /* YLSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */; };
-		8A26FA691BABC03500F19F7F /* YLSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */; };
-		8A26FA6C1BAC344400F19F7F /* YLTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA6B1BAC344400F19F7F /* YLTopicVideoView.m */; };
-		8A26FA6E1BAC345F00F19F7F /* YLTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA6D1BAC345F00F19F7F /* YLTopicVideoView.xib */; };
-		8A26FA711BAC561E00F19F7F /* YLTopicVioceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA701BAC561E00F19F7F /* YLTopicVioceView.m */; };
-		8A26FA731BAC562A00F19F7F /* YLTopicVioceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA721BAC562A00F19F7F /* YLTopicVioceView.xib */; };
 		8A26FA761BAD43D500F19F7F /* YLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA751BAD43D500F19F7F /* YLComment.m */; };
 		8A26FA791BAD463C00F19F7F /* YLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA781BAD463C00F19F7F /* YLUser.m */; };
-		8A26FA821BAD984D00F19F7F /* YLCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA801BAD984D00F19F7F /* YLCommentViewController.m */; };
-		8A26FA831BAD984D00F19F7F /* YLCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA811BAD984D00F19F7F /* YLCommentViewController.xib */; };
 		8A26FA871BADB60C00F19F7F /* YLCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A26FA851BADB60C00F19F7F /* YLCommentCell.m */; };
 		8A26FA881BADB60C00F19F7F /* YLCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A26FA861BADB60C00F19F7F /* YLCommentCell.xib */; };
 		8A4136CA1BA7B2AE0006AAA5 /* YLTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136C91BA7B2AE0006AAA5 /* YLTopic.m */; };
@@ -39,10 +29,28 @@
 		8A7BC6701BA127E800C455C7 /* YLPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BC66F1BA127E800C455C7 /* YLPlaceholderTextView.m */; };
 		8A7BC6B31BA1AC1100C455C7 /* YLAddTagToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BC6B21BA1AC1100C455C7 /* YLAddTagToolBar.m */; };
 		8A7BC6B71BA1AC7E00C455C7 /* YLAddTagToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BC6B61BA1AC7E00C455C7 /* YLAddTagToolBar.xib */; };
+		8A8A960D1BB12CE80088EB8C /* YLAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A95FA1BB12CE80088EB8C /* YLAllViewController.m */; };
+		8A8A960E1BB12CE80088EB8C /* YLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A95FC1BB12CE80088EB8C /* YLPictureViewController.m */; };
+		8A8A960F1BB12CE80088EB8C /* YLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A95FE1BB12CE80088EB8C /* YLVideoViewController.m */; };
+		8A8A96101BB12CE80088EB8C /* YLVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96001BB12CE80088EB8C /* YLVoiceViewController.m */; };
+		8A8A96111BB12CE80088EB8C /* YLWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96021BB12CE80088EB8C /* YLWordViewController.m */; };
+		8A8A96121BB12CE80088EB8C /* YLCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96041BB12CE80088EB8C /* YLCommentViewController.m */; };
+		8A8A96131BB12CE80088EB8C /* YLCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A96051BB12CE80088EB8C /* YLCommentViewController.xib */; };
+		8A8A96141BB12CE80088EB8C /* YLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96071BB12CE80088EB8C /* YLEssenceViewController.m */; };
+		8A8A96151BB12CE80088EB8C /* YLSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96091BB12CE80088EB8C /* YLSeeBigPictureViewController.m */; };
+		8A8A96161BB12CE80088EB8C /* YLSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A960A1BB12CE80088EB8C /* YLSeeBigPictureViewController.xib */; };
+		8A8A96171BB12CE80088EB8C /* YLTagViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A960C1BB12CE80088EB8C /* YLTagViewControl.m */; };
+		8A8A961A1BB12D440088EB8C /* YLTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96191BB12D440088EB8C /* YLTopicViewController.m */; };
+		8A8A961D1BB13DC50088EB8C /* YLCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A961C1BB13DC50088EB8C /* YLCommentHeaderView.m */; };
+		8A8A96281BB16A530088EB8C /* YLTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96201BB16A530088EB8C /* YLTopicPictureView.m */; };
+		8A8A96291BB16A530088EB8C /* YLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A96211BB16A530088EB8C /* YLTopicPictureView.xib */; };
+		8A8A962A1BB16A530088EB8C /* YLTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96231BB16A530088EB8C /* YLTopicVideoView.m */; };
+		8A8A962B1BB16A530088EB8C /* YLTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A96241BB16A530088EB8C /* YLTopicVideoView.xib */; };
+		8A8A962C1BB16A530088EB8C /* YLTopicVioceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A96261BB16A530088EB8C /* YLTopicVioceView.m */; };
+		8A8A962D1BB16A530088EB8C /* YLTopicVioceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8A96271BB16A530088EB8C /* YLTopicVioceView.xib */; };
+		8A8A96301BB16A930088EB8C /* YLTopicContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A962F1BB16A930088EB8C /* YLTopicContentView.m */; };
 		8AB74F801B9551F900B5DAF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB74F7F1B9551F900B5DAF1 /* Images.xcassets */; };
 		8AB74F8F1B9551F900B5DAF1 /* YL______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74F8E1B9551F900B5DAF1 /* YL______Tests.m */; };
-		8AB74FE61B96BA7200B5DAF1 /* YLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FBE1B96BA7200B5DAF1 /* YLEssenceViewController.m */; };
-		8AB74FE71B96BA7200B5DAF1 /* YLTagViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FC01B96BA7200B5DAF1 /* YLTagViewControl.m */; };
 		8AB74FE81B96BA7200B5DAF1 /* YLFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FC61B96BA7200B5DAF1 /* YLFriendTrendsViewController.m */; };
 		8AB74FE91B96BA7200B5DAF1 /* YLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FCC1B96BA7200B5DAF1 /* YLMeViewController.m */; };
 		8AB74FEA1B96BA7200B5DAF1 /* YLSettingViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB74FCE1B96BA7200B5DAF1 /* YLSettingViewControl.m */; };
@@ -56,11 +64,6 @@
 		8AC8D1121BA3CDA500FB8698 /* YLTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D1111BA3CDA500FB8698 /* YLTagButton.m */; };
 		8AC8D1151BA53C4D00FB8698 /* YLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D1141BA53C4D00FB8698 /* YLTextField.m */; };
 		8AC8D11A1BA5CABD00FB8698 /* YLTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D1191BA5CABD00FB8698 /* YLTitleButton.m */; };
-		8AC8D11D1BA69A4100FB8698 /* YLAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D11C1BA69A4100FB8698 /* YLAllViewController.m */; };
-		8AC8D1201BA69A5A00FB8698 /* YLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D11F1BA69A5A00FB8698 /* YLVideoViewController.m */; };
-		8AC8D1261BA69AC300FB8698 /* YLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D1251BA69AC300FB8698 /* YLPictureViewController.m */; };
-		8AC8D1291BA69AFD00FB8698 /* YLWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D1281BA69AFD00FB8698 /* YLWordViewController.m */; };
-		8AC8D12C1BA69B7100FB8698 /* YLVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC8D12B1BA69B7100FB8698 /* YLVoiceViewController.m */; };
 		8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */; };
 		8ACDFE0A1B9C551300A4991F /* YLTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ACDFE091B9C551300A4991F /* YLTagCell.m */; };
 		8ACDFE0C1B9C553800A4991F /* YLTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACDFE0B1B9C553800A4991F /* YLTagCell.xib */; };
@@ -97,25 +100,10 @@
 		1779C2041DD587699318D3EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8A26FA181BA848BF00F19F7F /* NSDate+YLEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YLEXT.h"; sourceTree = "<group>"; };
 		8A26FA191BA848BF00F19F7F /* NSDate+YLEXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YLEXT.m"; sourceTree = "<group>"; };
-		8A26FA5C1BA9B64400F19F7F /* YLTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicPictureView.h; sourceTree = "<group>"; };
-		8A26FA5D1BA9B64400F19F7F /* YLTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicPictureView.m; sourceTree = "<group>"; };
-		8A26FA631BA9E0F700F19F7F /* YLTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicPictureView.xib; sourceTree = "<group>"; };
-		8A26FA651BABC03500F19F7F /* YLSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSeeBigPictureViewController.h; sourceTree = "<group>"; };
-		8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSeeBigPictureViewController.m; sourceTree = "<group>"; };
-		8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLSeeBigPictureViewController.xib; sourceTree = "<group>"; };
-		8A26FA6A1BAC344400F19F7F /* YLTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicVideoView.h; sourceTree = "<group>"; };
-		8A26FA6B1BAC344400F19F7F /* YLTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicVideoView.m; sourceTree = "<group>"; };
-		8A26FA6D1BAC345F00F19F7F /* YLTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicVideoView.xib; sourceTree = "<group>"; };
-		8A26FA6F1BAC561E00F19F7F /* YLTopicVioceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicVioceView.h; sourceTree = "<group>"; };
-		8A26FA701BAC561E00F19F7F /* YLTopicVioceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicVioceView.m; sourceTree = "<group>"; };
-		8A26FA721BAC562A00F19F7F /* YLTopicVioceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicVioceView.xib; sourceTree = "<group>"; };
 		8A26FA741BAD43D500F19F7F /* YLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLComment.h; sourceTree = "<group>"; };
 		8A26FA751BAD43D500F19F7F /* YLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLComment.m; sourceTree = "<group>"; };
 		8A26FA771BAD463C00F19F7F /* YLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLUser.h; sourceTree = "<group>"; };
 		8A26FA781BAD463C00F19F7F /* YLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLUser.m; sourceTree = "<group>"; };
-		8A26FA7F1BAD984D00F19F7F /* YLCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCommentViewController.h; sourceTree = "<group>"; };
-		8A26FA801BAD984D00F19F7F /* YLCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCommentViewController.m; sourceTree = "<group>"; };
-		8A26FA811BAD984D00F19F7F /* YLCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLCommentViewController.xib; sourceTree = "<group>"; };
 		8A26FA841BADB60C00F19F7F /* YLCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCommentCell.h; sourceTree = "<group>"; };
 		8A26FA851BADB60C00F19F7F /* YLCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCommentCell.m; sourceTree = "<group>"; };
 		8A26FA861BADB60C00F19F7F /* YLCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLCommentCell.xib; sourceTree = "<group>"; };
@@ -147,16 +135,47 @@
 		8A7BC6B11BA1AC1100C455C7 /* YLAddTagToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAddTagToolBar.h; sourceTree = "<group>"; };
 		8A7BC6B21BA1AC1100C455C7 /* YLAddTagToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAddTagToolBar.m; sourceTree = "<group>"; };
 		8A7BC6B61BA1AC7E00C455C7 /* YLAddTagToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLAddTagToolBar.xib; sourceTree = "<group>"; };
+		8A8A95F91BB12CE80088EB8C /* YLAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAllViewController.h; sourceTree = "<group>"; };
+		8A8A95FA1BB12CE80088EB8C /* YLAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAllViewController.m; sourceTree = "<group>"; };
+		8A8A95FB1BB12CE80088EB8C /* YLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLPictureViewController.h; sourceTree = "<group>"; };
+		8A8A95FC1BB12CE80088EB8C /* YLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLPictureViewController.m; sourceTree = "<group>"; };
+		8A8A95FD1BB12CE80088EB8C /* YLVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLVideoViewController.h; sourceTree = "<group>"; };
+		8A8A95FE1BB12CE80088EB8C /* YLVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLVideoViewController.m; sourceTree = "<group>"; };
+		8A8A95FF1BB12CE80088EB8C /* YLVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLVoiceViewController.h; sourceTree = "<group>"; };
+		8A8A96001BB12CE80088EB8C /* YLVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLVoiceViewController.m; sourceTree = "<group>"; };
+		8A8A96011BB12CE80088EB8C /* YLWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLWordViewController.h; sourceTree = "<group>"; };
+		8A8A96021BB12CE80088EB8C /* YLWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLWordViewController.m; sourceTree = "<group>"; };
+		8A8A96031BB12CE80088EB8C /* YLCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCommentViewController.h; sourceTree = "<group>"; };
+		8A8A96041BB12CE80088EB8C /* YLCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCommentViewController.m; sourceTree = "<group>"; };
+		8A8A96051BB12CE80088EB8C /* YLCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLCommentViewController.xib; sourceTree = "<group>"; };
+		8A8A96061BB12CE80088EB8C /* YLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLEssenceViewController.h; sourceTree = "<group>"; };
+		8A8A96071BB12CE80088EB8C /* YLEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLEssenceViewController.m; sourceTree = "<group>"; };
+		8A8A96081BB12CE80088EB8C /* YLSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		8A8A96091BB12CE80088EB8C /* YLSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		8A8A960A1BB12CE80088EB8C /* YLSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLSeeBigPictureViewController.xib; sourceTree = "<group>"; };
+		8A8A960B1BB12CE80088EB8C /* YLTagViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTagViewControl.h; sourceTree = "<group>"; };
+		8A8A960C1BB12CE80088EB8C /* YLTagViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTagViewControl.m; sourceTree = "<group>"; };
+		8A8A96181BB12D440088EB8C /* YLTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicViewController.h; sourceTree = "<group>"; };
+		8A8A96191BB12D440088EB8C /* YLTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicViewController.m; sourceTree = "<group>"; };
+		8A8A961B1BB13DC50088EB8C /* YLCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCommentHeaderView.h; sourceTree = "<group>"; };
+		8A8A961C1BB13DC50088EB8C /* YLCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCommentHeaderView.m; sourceTree = "<group>"; };
+		8A8A961F1BB16A530088EB8C /* YLTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicPictureView.h; sourceTree = "<group>"; };
+		8A8A96201BB16A530088EB8C /* YLTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicPictureView.m; sourceTree = "<group>"; };
+		8A8A96211BB16A530088EB8C /* YLTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicPictureView.xib; sourceTree = "<group>"; };
+		8A8A96221BB16A530088EB8C /* YLTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicVideoView.h; sourceTree = "<group>"; };
+		8A8A96231BB16A530088EB8C /* YLTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicVideoView.m; sourceTree = "<group>"; };
+		8A8A96241BB16A530088EB8C /* YLTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicVideoView.xib; sourceTree = "<group>"; };
+		8A8A96251BB16A530088EB8C /* YLTopicVioceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicVioceView.h; sourceTree = "<group>"; };
+		8A8A96261BB16A530088EB8C /* YLTopicVioceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicVioceView.m; sourceTree = "<group>"; };
+		8A8A96271BB16A530088EB8C /* YLTopicVioceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicVioceView.xib; sourceTree = "<group>"; };
+		8A8A962E1BB16A930088EB8C /* YLTopicContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicContentView.h; sourceTree = "<group>"; };
+		8A8A962F1BB16A930088EB8C /* YLTopicContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicContentView.m; sourceTree = "<group>"; };
 		8AB74F6F1B9551F900B5DAF1 /* YL-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YL-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB74F731B9551F900B5DAF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB74F7F1B9551F900B5DAF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8AB74F881B9551F900B5DAF1 /* YL-百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YL-百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB74F8D1B9551F900B5DAF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AB74F8E1B9551F900B5DAF1 /* YL______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YL______Tests.m"; sourceTree = "<group>"; };
-		8AB74FBD1B96BA7200B5DAF1 /* YLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLEssenceViewController.h; sourceTree = "<group>"; };
-		8AB74FBE1B96BA7200B5DAF1 /* YLEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLEssenceViewController.m; sourceTree = "<group>"; };
-		8AB74FBF1B96BA7200B5DAF1 /* YLTagViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTagViewControl.h; sourceTree = "<group>"; };
-		8AB74FC01B96BA7200B5DAF1 /* YLTagViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTagViewControl.m; sourceTree = "<group>"; };
 		8AB74FC51B96BA7200B5DAF1 /* YLFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLFriendTrendsViewController.h; sourceTree = "<group>"; };
 		8AB74FC61B96BA7200B5DAF1 /* YLFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLFriendTrendsViewController.m; sourceTree = "<group>"; };
 		8AB74FCB1B96BA7200B5DAF1 /* YLMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLMeViewController.h; sourceTree = "<group>"; };
@@ -183,16 +202,6 @@
 		8AC8D1141BA53C4D00FB8698 /* YLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTextField.m; sourceTree = "<group>"; };
 		8AC8D1181BA5CABD00FB8698 /* YLTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTitleButton.h; sourceTree = "<group>"; };
 		8AC8D1191BA5CABD00FB8698 /* YLTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTitleButton.m; sourceTree = "<group>"; };
-		8AC8D11B1BA69A4100FB8698 /* YLAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAllViewController.h; sourceTree = "<group>"; };
-		8AC8D11C1BA69A4100FB8698 /* YLAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAllViewController.m; sourceTree = "<group>"; };
-		8AC8D11E1BA69A5A00FB8698 /* YLVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLVideoViewController.h; sourceTree = "<group>"; };
-		8AC8D11F1BA69A5A00FB8698 /* YLVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLVideoViewController.m; sourceTree = "<group>"; };
-		8AC8D1241BA69AC300FB8698 /* YLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLPictureViewController.h; sourceTree = "<group>"; };
-		8AC8D1251BA69AC300FB8698 /* YLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLPictureViewController.m; sourceTree = "<group>"; };
-		8AC8D1271BA69AFD00FB8698 /* YLWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLWordViewController.h; sourceTree = "<group>"; };
-		8AC8D1281BA69AFD00FB8698 /* YLWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLWordViewController.m; sourceTree = "<group>"; };
-		8AC8D12A1BA69B7100FB8698 /* YLVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLVoiceViewController.h; sourceTree = "<group>"; };
-		8AC8D12B1BA69B7100FB8698 /* YLVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLVoiceViewController.m; sourceTree = "<group>"; };
 		8ACDFE051B9C4B3800A4991F /* UIView+YLFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YLFrame.h"; sourceTree = "<group>"; };
 		8ACDFE061B9C4B3800A4991F /* UIView+YLFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YLFrame.m"; sourceTree = "<group>"; };
 		8ACDFE081B9C551300A4991F /* YLTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTagCell.h; sourceTree = "<group>"; };
@@ -309,6 +318,61 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8A8A95F71BB12CE80088EB8C /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				8A8A95F81BB12CE80088EB8C /* Topic */,
+				8A8A96061BB12CE80088EB8C /* YLEssenceViewController.h */,
+				8A8A96071BB12CE80088EB8C /* YLEssenceViewController.m */,
+				8A8A960B1BB12CE80088EB8C /* YLTagViewControl.h */,
+				8A8A960C1BB12CE80088EB8C /* YLTagViewControl.m */,
+				8A8A96081BB12CE80088EB8C /* YLSeeBigPictureViewController.h */,
+				8A8A96091BB12CE80088EB8C /* YLSeeBigPictureViewController.m */,
+				8A8A960A1BB12CE80088EB8C /* YLSeeBigPictureViewController.xib */,
+				8A8A96031BB12CE80088EB8C /* YLCommentViewController.h */,
+				8A8A96041BB12CE80088EB8C /* YLCommentViewController.m */,
+				8A8A96051BB12CE80088EB8C /* YLCommentViewController.xib */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		8A8A95F81BB12CE80088EB8C /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				8A8A96181BB12D440088EB8C /* YLTopicViewController.h */,
+				8A8A96191BB12D440088EB8C /* YLTopicViewController.m */,
+				8A8A95F91BB12CE80088EB8C /* YLAllViewController.h */,
+				8A8A95FA1BB12CE80088EB8C /* YLAllViewController.m */,
+				8A8A95FB1BB12CE80088EB8C /* YLPictureViewController.h */,
+				8A8A95FC1BB12CE80088EB8C /* YLPictureViewController.m */,
+				8A8A95FD1BB12CE80088EB8C /* YLVideoViewController.h */,
+				8A8A95FE1BB12CE80088EB8C /* YLVideoViewController.m */,
+				8A8A95FF1BB12CE80088EB8C /* YLVoiceViewController.h */,
+				8A8A96001BB12CE80088EB8C /* YLVoiceViewController.m */,
+				8A8A96011BB12CE80088EB8C /* YLWordViewController.h */,
+				8A8A96021BB12CE80088EB8C /* YLWordViewController.m */,
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
+		8A8A961E1BB16A530088EB8C /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				8A8A962E1BB16A930088EB8C /* YLTopicContentView.h */,
+				8A8A962F1BB16A930088EB8C /* YLTopicContentView.m */,
+				8A8A961F1BB16A530088EB8C /* YLTopicPictureView.h */,
+				8A8A96201BB16A530088EB8C /* YLTopicPictureView.m */,
+				8A8A96211BB16A530088EB8C /* YLTopicPictureView.xib */,
+				8A8A96221BB16A530088EB8C /* YLTopicVideoView.h */,
+				8A8A96231BB16A530088EB8C /* YLTopicVideoView.m */,
+				8A8A96241BB16A530088EB8C /* YLTopicVideoView.xib */,
+				8A8A96251BB16A530088EB8C /* YLTopicVioceView.h */,
+				8A8A96261BB16A530088EB8C /* YLTopicVioceView.m */,
+				8A8A96271BB16A530088EB8C /* YLTopicVioceView.xib */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		8AB74F661B9551F900B5DAF1 = {
 			isa = PBXGroup;
 			children = (
@@ -383,38 +447,11 @@
 		8AB74FBB1B96BA7200B5DAF1 /* Essence-精华 */ = {
 			isa = PBXGroup;
 			children = (
-				8AB74FBC1B96BA7200B5DAF1 /* Control */,
+				8A8A95F71BB12CE80088EB8C /* Control */,
 				8AB74FC11B96BA7200B5DAF1 /* Model */,
 				8AB74FC21B96BA7200B5DAF1 /* View */,
 			);
 			path = "Essence-精华";
-			sourceTree = "<group>";
-		};
-		8AB74FBC1B96BA7200B5DAF1 /* Control */ = {
-			isa = PBXGroup;
-			children = (
-				8AB74FBD1B96BA7200B5DAF1 /* YLEssenceViewController.h */,
-				8AB74FBE1B96BA7200B5DAF1 /* YLEssenceViewController.m */,
-				8AB74FBF1B96BA7200B5DAF1 /* YLTagViewControl.h */,
-				8AB74FC01B96BA7200B5DAF1 /* YLTagViewControl.m */,
-				8AC8D11B1BA69A4100FB8698 /* YLAllViewController.h */,
-				8AC8D11C1BA69A4100FB8698 /* YLAllViewController.m */,
-				8AC8D11E1BA69A5A00FB8698 /* YLVideoViewController.h */,
-				8AC8D11F1BA69A5A00FB8698 /* YLVideoViewController.m */,
-				8AC8D12A1BA69B7100FB8698 /* YLVoiceViewController.h */,
-				8AC8D12B1BA69B7100FB8698 /* YLVoiceViewController.m */,
-				8AC8D1241BA69AC300FB8698 /* YLPictureViewController.h */,
-				8AC8D1251BA69AC300FB8698 /* YLPictureViewController.m */,
-				8AC8D1271BA69AFD00FB8698 /* YLWordViewController.h */,
-				8AC8D1281BA69AFD00FB8698 /* YLWordViewController.m */,
-				8A26FA651BABC03500F19F7F /* YLSeeBigPictureViewController.h */,
-				8A26FA661BABC03500F19F7F /* YLSeeBigPictureViewController.m */,
-				8A26FA671BABC03500F19F7F /* YLSeeBigPictureViewController.xib */,
-				8A26FA7F1BAD984D00F19F7F /* YLCommentViewController.h */,
-				8A26FA801BAD984D00F19F7F /* YLCommentViewController.m */,
-				8A26FA811BAD984D00F19F7F /* YLCommentViewController.xib */,
-			);
-			path = Control;
 			sourceTree = "<group>";
 		};
 		8AB74FC11B96BA7200B5DAF1 /* Model */ = {
@@ -435,6 +472,7 @@
 		8AB74FC21B96BA7200B5DAF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A8A961E1BB16A530088EB8C /* Content */,
 				8ACDFE081B9C551300A4991F /* YLTagCell.h */,
 				8ACDFE091B9C551300A4991F /* YLTagCell.m */,
 				8ACDFE0B1B9C553800A4991F /* YLTagCell.xib */,
@@ -443,18 +481,11 @@
 				8A4136CD1BA7C4960006AAA5 /* YLTopicCell.h */,
 				8A4136CE1BA7C4960006AAA5 /* YLTopicCell.m */,
 				8A4136CF1BA7C4960006AAA5 /* YLTopicCell.xib */,
-				8A26FA5C1BA9B64400F19F7F /* YLTopicPictureView.h */,
-				8A26FA5D1BA9B64400F19F7F /* YLTopicPictureView.m */,
-				8A26FA631BA9E0F700F19F7F /* YLTopicPictureView.xib */,
-				8A26FA6A1BAC344400F19F7F /* YLTopicVideoView.h */,
-				8A26FA6B1BAC344400F19F7F /* YLTopicVideoView.m */,
-				8A26FA6D1BAC345F00F19F7F /* YLTopicVideoView.xib */,
-				8A26FA6F1BAC561E00F19F7F /* YLTopicVioceView.h */,
-				8A26FA701BAC561E00F19F7F /* YLTopicVioceView.m */,
-				8A26FA721BAC562A00F19F7F /* YLTopicVioceView.xib */,
 				8A26FA841BADB60C00F19F7F /* YLCommentCell.h */,
 				8A26FA851BADB60C00F19F7F /* YLCommentCell.m */,
 				8A26FA861BADB60C00F19F7F /* YLCommentCell.xib */,
+				8A8A961B1BB13DC50088EB8C /* YLCommentHeaderView.h */,
+				8A8A961C1BB13DC50088EB8C /* YLCommentHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -742,20 +773,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A26FA691BABC03500F19F7F /* YLSeeBigPictureViewController.xib in Resources */,
 				8A50532C1B974D61006AC6AF /* YLFriendTrendsViewController.xib in Resources */,
 				8A7BC6B71BA1AC7E00C455C7 /* YLAddTagToolBar.xib in Resources */,
+				8A8A962D1BB16A530088EB8C /* YLTopicVioceView.xib in Resources */,
+				8A8A96161BB12CE80088EB8C /* YLSeeBigPictureViewController.xib in Resources */,
 				8A26FA881BADB60C00F19F7F /* YLCommentCell.xib in Resources */,
-				8A26FA6E1BAC345F00F19F7F /* YLTopicVideoView.xib in Resources */,
+				8A8A96291BB16A530088EB8C /* YLTopicPictureView.xib in Resources */,
 				8A5053311B9756D6006AC6AF /* YLLoginRegisterViewController.xib in Resources */,
-				8A26FA731BAC562A00F19F7F /* YLTopicVioceView.xib in Resources */,
 				8A7BC6671B9FF0E900C455C7 /* YLPublicViewController.xib in Resources */,
 				8ACDFE401B9EA3C800A4991F /* YLWebViewController.xib in Resources */,
 				8A4136D11BA7C4960006AAA5 /* YLTopicCell.xib in Resources */,
 				8A57553B1B997FC300F6F98D /* YLGuideView.xib in Resources */,
 				8AB74F801B9551F900B5DAF1 /* Images.xcassets in Resources */,
-				8A26FA831BAD984D00F19F7F /* YLCommentViewController.xib in Resources */,
-				8A26FA641BA9E0F700F19F7F /* YLTopicPictureView.xib in Resources */,
+				8A8A962B1BB16A530088EB8C /* YLTopicVideoView.xib in Resources */,
+				8A8A96131BB12CE80088EB8C /* YLCommentViewController.xib in Resources */,
 				8ACDFE0C1B9C553800A4991F /* YLTagCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,6 +838,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A8A96171BB12CE80088EB8C /* YLTagViewControl.m in Sources */,
+				8A8A96301BB16A930088EB8C /* YLTopicContentView.m in Sources */,
+				8A8A962A1BB16A530088EB8C /* YLTopicVideoView.m in Sources */,
 				8AB74FEB1B96BA7200B5DAF1 /* YLNewViewController.m in Sources */,
 				8A5755041B984D9C00F6F98D /* YLLoginRegisterTextField.m in Sources */,
 				8ACDFE2C1B9DDAF800A4991F /* YLSquareBtn.m in Sources */,
@@ -815,52 +849,52 @@
 				8ACDFE1A1B9CAF1200A4991F /* UIImage+YLEXT.m in Sources */,
 				8A26FA1A1BA848BF00F19F7F /* NSDate+YLEXT.m in Sources */,
 				8A26FA871BADB60C00F19F7F /* YLCommentCell.m in Sources */,
-				8AC8D12C1BA69B7100FB8698 /* YLVoiceViewController.m in Sources */,
 				8ACDFE291B9DD30E00A4991F /* YLSquare.m in Sources */,
 				8A7BC66D1BA08C6600C455C7 /* YLPostWordViewController.m in Sources */,
+				8A8A960E1BB12CE80088EB8C /* YLPictureViewController.m in Sources */,
 				8A26FA761BAD43D500F19F7F /* YLComment.m in Sources */,
 				8AB74FEA1B96BA7200B5DAF1 /* YLSettingViewControl.m in Sources */,
-				8AC8D11D1BA69A4100FB8698 /* YLAllViewController.m in Sources */,
 				8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */,
 				8ACDFE141B9C860C00A4991F /* YLConst.m in Sources */,
+				8A8A960F1BB12CE80088EB8C /* YLVideoViewController.m in Sources */,
 				8ACDFE231B9DB6B100A4991F /* YLMeCell.m in Sources */,
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
+				8A8A961D1BB13DC50088EB8C /* YLCommentHeaderView.m in Sources */,
 				8AC8D11A1BA5CABD00FB8698 /* YLTitleButton.m in Sources */,
 				8A7BC66A1BA04B7A00C455C7 /* YLPublicButton.m in Sources */,
-				8A26FA821BAD984D00F19F7F /* YLCommentViewController.m in Sources */,
-				8A26FA711BAC561E00F19F7F /* YLTopicVioceView.m in Sources */,
-				8A26FA5E1BA9B64400F19F7F /* YLTopicPictureView.m in Sources */,
 				8AC8D1151BA53C4D00FB8698 /* YLTextField.m in Sources */,
 				8ACDFE1D1B9D651500A4991F /* UIImageView+YLEXT.m in Sources */,
 				8AB74FED1B96BA7200B5DAF1 /* UIBarButtonItem+EXT.m in Sources */,
-				8AC8D1261BA69AC300FB8698 /* YLPictureViewController.m in Sources */,
+				8A8A96151BB12CE80088EB8C /* YLSeeBigPictureViewController.m in Sources */,
 				8A4136CC1BA7B5820006AAA5 /* Foundation+Log.m in Sources */,
 				8ACDFE461B9EB6D800A4991F /* YLClearCacheCell.m in Sources */,
+				8A8A961A1BB12D440088EB8C /* YLTopicViewController.m in Sources */,
 				8AE67D441BA31A4700914E9F /* UITextField+YLEXT.m in Sources */,
 				8A7BC6701BA127E800C455C7 /* YLPlaceholderTextView.m in Sources */,
-				8A26FA6C1BAC344400F19F7F /* YLTopicVideoView.m in Sources */,
+				8A8A96121BB12CE80088EB8C /* YLCommentViewController.m in Sources */,
 				8A4136CA1BA7B2AE0006AAA5 /* YLTopic.m in Sources */,
+				8A8A96141BB12CE80088EB8C /* YLEssenceViewController.m in Sources */,
 				8AE67D3D1BA3071000914E9F /* YLPublicViewController.m in Sources */,
 				8ACDFE491B9ED89700A4991F /* YLThirdCell.m in Sources */,
 				8AB74FEF1B96BA7200B5DAF1 /* YLTabBarController.m in Sources */,
+				8A8A962C1BB16A530088EB8C /* YLTopicVioceView.m in Sources */,
 				8AE67D3B1BA2ECF100914E9F /* YLAddTagViewController.m in Sources */,
 				8A5755391B997FA900F6F98D /* YLGuideView.m in Sources */,
-				8AC8D1201BA69A5A00FB8698 /* YLVideoViewController.m in Sources */,
 				8ACDFE201B9D7C6F00A4991F /* NSString+YLEXT.m in Sources */,
-				8AB74FE71B96BA7200B5DAF1 /* YLTagViewControl.m in Sources */,
 				8ACDFE0F1B9C612900A4991F /* YLTag.m in Sources */,
 				8ACDFE261B9DD13C00A4991F /* YLFooterView.m in Sources */,
 				8AB74FE91B96BA7200B5DAF1 /* YLMeViewController.m in Sources */,
+				8A8A96101BB12CE80088EB8C /* YLVoiceViewController.m in Sources */,
+				8A8A960D1BB12CE80088EB8C /* YLAllViewController.m in Sources */,
 				8ACDFE0A1B9C551300A4991F /* YLTagCell.m in Sources */,
-				8AB74FE61B96BA7200B5DAF1 /* YLEssenceViewController.m in Sources */,
 				8ACDFE3A1B9E850C00A4991F /* YLWebViewController.m in Sources */,
 				8AB74FE81B96BA7200B5DAF1 /* YLFriendTrendsViewController.m in Sources */,
 				8AB74FF01B96BA7200B5DAF1 /* main.m in Sources */,
+				8A8A96111BB12CE80088EB8C /* YLWordViewController.m in Sources */,
 				8AB74FF31B96BD0E00B5DAF1 /* YLNavigationControl.m in Sources */,
-				8AC8D1291BA69AFD00FB8698 /* YLWordViewController.m in Sources */,
-				8A26FA681BABC03500F19F7F /* YLSeeBigPictureViewController.m in Sources */,
 				8A4136D01BA7C4960006AAA5 /* YLTopicCell.m in Sources */,
 				8AC8D1121BA3CDA500FB8698 /* YLTagButton.m in Sources */,
+				8A8A96281BB16A530088EB8C /* YLTopicPictureView.m in Sources */,
 				8A5754FE1B9816E100F6F98D /* YLQuickLoginButton.m in Sources */,
 				8AB74FEC1B96BA7200B5DAF1 /* AppDelegate.m in Sources */,
 				8A26FA791BAD463C00F19F7F /* YLUser.m in Sources */,

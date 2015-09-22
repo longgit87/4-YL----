@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 www.xm.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-@class YLTopic;
-@interface YLTopicVideoView : UIView
+#import "YLTopicContentView.h"
 
-@property (nonatomic, strong) YLTopic *topic;
+@interface YLTopicVideoView : YLTopicContentView
+
+
 
 @end

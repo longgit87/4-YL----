@@ -11,6 +11,8 @@
 
 
 typedef  enum {
+    /** 全部 */
+    YLTopicTypeAll = 1,
     /** 图片 */
     YLTopicTypePicture = 10,
     /** 段子(文字) */

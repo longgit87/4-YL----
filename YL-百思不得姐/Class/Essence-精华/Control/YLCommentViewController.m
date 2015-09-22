@@ -14,6 +14,7 @@
 #import <MJRefresh.h>
 #import <AFNetworking.h>
 #import <MJExtension.h>
+#import "YLCommentHeaderView.h"
 
 @interface YLCommentViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -34,6 +35,7 @@
 @implementation YLCommentViewController
 
 static NSString *ID = @"comment";
+static NSString *const headerViewId = @"header";
 
 - (AFHTTPSessionManager *)manager
 {
@@ -63,6 +65,8 @@ static NSString *ID = @"comment";
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
     [self.tableView.header beginRefreshing];
+    
+    
 
 }
 /**下拉刷新*/
@@ -153,6 +157,9 @@ static NSString *ID = @"comment";
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YLCommentCell class]) bundle:nil] forCellReuseIdentifier:ID];
     
+    
+    [self.tableView registerClass:[YLCommentHeaderView class] forHeaderFooterViewReuseIdentifier:headerViewId];
+    
     //处理模型数据
     if (self.topic.topComment) {
        
@@ -237,11 +244,28 @@ static NSString *ID = @"comment";
 
     return cell;
 }
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//  
+//   
+//    if (section == 0 && self.hotComments.count) {
+//        
+//        return @"最热评论";
+//    }
+//  return @"最新评论";
+//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+
+     YLCommentHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerViewId];
+
     if (section == 0 && self.hotComments.count) {
-        return @"热门评论";
+        headerView.text = @"最热评论";
+  
+    }else{
+    headerView.text = @"最近评论";
     }
-  return @"最新评论";
+    return headerView;
+
 }
 @end

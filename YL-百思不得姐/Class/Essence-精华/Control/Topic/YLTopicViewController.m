@@ -1,12 +1,14 @@
 //
-//  YLAllViewController.m
+//  YLTopicViewController.m
 //  YL-百思不得姐
 //
-//  Created by 陈亚龙 on 15/9/14.
+//  Created by 陈亚龙 on 15/9/22.
 //  Copyright (c) 2015年 www.xm.com. All rights reserved.
 //
 
-#import "YLAllViewController.h"
+#import "YLTopicViewController.h"
+
+
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
@@ -14,7 +16,7 @@
 #import "YLTopicCell.h"
 #import "YLCommentViewController.h"
 
-@interface YLAllViewController ()
+@interface YLTopicViewController ()
 /**
  *  请求管理者
  */
@@ -29,7 +31,12 @@
 @property (copy, nonatomic) NSString *maxtime;
 @end
 
-@implementation YLAllViewController
+@implementation YLTopicViewController
+/**实现这个方法的目的只是为了消除警告（因为子类的type方法最终会覆盖父类的type方法）*/
+- (YLTopicType)type
+{
+    return 0;
+}
 
 static NSString *const ID = @"topicCell";
 
@@ -52,26 +59,26 @@ static NSString *const ID = @"topicCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
+    
+    
     [self setuptable];
-
+    
     [self setupRefresh];
 }
 
 - (void)setuptable
 {
-
+    
     self.tableView.backgroundColor = YLCommonBgColor;
     //设置内边距
     self.tableView.contentInset = UIEdgeInsetsMake(YLNavBarMaxY + YLTitleHeight, 0, YLTabBarHeight, 0);
     //设置右边滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-
+    
     //注册cell
     [self.tableView registerNib: [UINib nibWithNibName:NSStringFromClass([YLTopicCell class]) bundle:nil] forCellReuseIdentifier:ID];
     
-
+    
 }
 - (void)setupRefresh
 {
@@ -94,18 +101,18 @@ static NSString *const ID = @"topicCell";
 {
     //取消之前的所有请求
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
-
+    
     // 请求参数
     NSDictionary *parameters = @{
                                  @"a":@"list",
                                  @"c":@"data",
-                                 @"type":@1
+                                 @"type":@(self.type)
                                  
                                  };
-
+    
     YLWeadSelf;
     [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *tast, id responseObject) {
-//       YLWriteToPlist(responseObject, @"topics");
+        //       YLWriteToPlist(responseObject, @"topics");
         
         
         //字典转模型
@@ -119,14 +126,14 @@ static NSString *const ID = @"topicCell";
         
         //结束刷新
         [weakSelf.tableView.header endRefreshing];
-
+        
     } failure:^ void(NSURLSessionDataTask * tast, NSError * error) {
         YLLog(@"私奔");
         
         //结束刷新
         [weakSelf.tableView.header endRefreshing];
     }];
-
+    
 }
 /**
  *  加载更多
@@ -140,15 +147,15 @@ static NSString *const ID = @"topicCell";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @1;
+    parameters[@"type"] = @(self.type);
     parameters[@"maxtime"] = self.maxtime;
     
     YLWeadSelf;
     [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *task, id responseObject) {
-       
+        
         //字典数组 -> 模型数组
         NSArray *moreTopics = [YLTopic objectArrayWithKeyValuesArray:responseObject[@"list"]];
-       
+        
         [weakSelf.topics addObjectsFromArray:moreTopics];
         //储存maxtime
         weakSelf.maxtime = responseObject[@"info"][@"maxtime"];
@@ -167,20 +174,20 @@ static NSString *const ID = @"topicCell";
 }
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-
+    
+    
     return self.topics.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     
     YLTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-
-
+    
+    
     cell.topic = self.topics[indexPath.row];;
-
+    
     return cell;
 }
 
@@ -191,7 +198,7 @@ static NSString *const ID = @"topicCell";
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     YLCommentViewController *commentVc = [[YLCommentViewController alloc]init];
-
+    
     commentVc.topic = self.topics[indexPath.row];
     
     [self.navigationController pushViewController:commentVc animated:YES];
@@ -200,7 +207,7 @@ static NSString *const ID = @"topicCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YLTopic *topic = self.topics[indexPath.row];
-
+    
     return topic.cellHeight;
 }
 @end

@@ -1,5 +1,5 @@
 //
-//  YLAllViewController.h
+//  YLVoiceViewController.h
 //  YL-百思不得姐
 //
 //  Created by 陈亚龙 on 15/9/14.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface YLAllViewController : UITableViewController
+#import "YLTopicViewController.h"
+@interface YLVoiceViewController : YLTopicViewController
 
 @end
