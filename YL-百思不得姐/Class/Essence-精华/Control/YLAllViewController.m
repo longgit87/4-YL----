@@ -12,7 +12,6 @@
 #import <MJExtension.h>
 #import "YLTopic.h"
 #import "YLTopicCell.h"
-#import "YLTopicPictureView.h"
 #import "YLCommentViewController.h"
 
 @interface YLAllViewController ()
@@ -32,7 +31,7 @@
 
 @implementation YLAllViewController
 
-static NSString *ID = @"topicCell";
+static NSString *const ID = @"topicCell";
 
 - (AFHTTPSessionManager *)manager
 {

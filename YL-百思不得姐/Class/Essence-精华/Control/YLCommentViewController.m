@@ -89,9 +89,11 @@ static NSString *ID = @"comment";
         [weakSelf.tableView.header endRefreshing];
         
         //已经加载完毕
-        if (self.latestComments.count >= [responseObject[@"total"] integerValue]){
+        if (self.latestComments.count >= [responseObject[@"total"] intValue]){
         
             self.tableView.footer.hidden = YES;
+            self.tableView.footer = nil;
+            [self.tableView reloadData];
         }
 
     } failure:^ void(NSURLSessionDataTask *task, NSError *error) {
@@ -143,7 +145,6 @@ static NSString *ID = @"comment";
         [weakSelf.tableView.footer endRefreshing];
         
     }];
-    
 
 }
 - (void)setupTable
