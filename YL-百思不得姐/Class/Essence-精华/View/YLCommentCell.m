@@ -23,10 +23,16 @@
 
 - (void)awakeFromNib {
 
-//    self.autoresizingMask = NO;
+
     
     
 
+}
+- (void)setFrame:(CGRect)frame
+{
+    frame.size.height -= 1;
+    
+    [super setFrame:frame];
 }
 
 - (void)setComment:(YLComment *)comment

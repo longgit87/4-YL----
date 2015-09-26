@@ -15,6 +15,7 @@
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import "YLCommentHeaderView.h"
+#import "YLUser.h"
 
 @interface YLCommentViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -29,6 +30,9 @@
 
 /**请求管理者*/
 @property (weak, nonatomic) AFHTTPSessionManager *manager;
+
+/** 写方法声明的目的是为了使用点语法提示 */
+@property (strong, nonatomic) YLComment *selectComment;
 
 @end
 
@@ -83,6 +87,14 @@ static NSString *const headerViewId = @"header";
     
     YLWeadSelf;
     [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *task, id responseObject) {
+ 
+        //判读返回的数据是否为数组（如果没有评论数据了，服务器会返回一个空数组）
+        if ([responseObject isKindOfClass:[NSArray class]]) {
+            //结束刷新
+            [weakSelf.tableView.header endRefreshing];
+            return;
+        }
+
         //最热评论
         weakSelf.hotComments = [YLComment objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         //最新评论
@@ -92,13 +104,14 @@ static NSString *const headerViewId = @"header";
         //停止刷新
         [weakSelf.tableView.header endRefreshing];
         
-        //已经加载完毕
+        // 已经加载完毕
         if (self.latestComments.count >= [responseObject[@"total"] intValue]){
         
             self.tableView.footer.hidden = YES;
             self.tableView.footer = nil;
             [self.tableView reloadData];
         }
+     
 
     } failure:^ void(NSURLSessionDataTask *task, NSError *error) {
         //结束刷新
@@ -121,6 +134,12 @@ static NSString *const headerViewId = @"header";
 
     [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *task , id responseObject) {
        
+//        if (self.latestComments.count >= [responseObject[@"total"] intValue]) {
+//            [weakSelf.tableView.footer endRefreshing];
+//            return;
+//            
+//        }
+
         //获取请求到的下一页数据
         NSArray *newComments = [YLComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
         
@@ -153,7 +172,9 @@ static NSString *const headerViewId = @"header";
 }
 - (void)setupTable
 {
+    
     self.tableView.backgroundColor = YLCommonBgColor;
+    self.tableView.separatorStyle = UITableViewRowAnimationNone;
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YLCommentCell class]) bundle:nil] forCellReuseIdentifier:ID];
     
@@ -244,16 +265,7 @@ static NSString *const headerViewId = @"header";
 
     return cell;
 }
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//  
-//   
-//    if (section == 0 && self.hotComments.count) {
-//        
-//        return @"最热评论";
-//    }
-//  return @"最新评论";
-//}
+//组头View
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
 
@@ -267,5 +279,76 @@ static NSString *const headerViewId = @"header";
     }
     return headerView;
 
+}
+//点击cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //取出点击的cell
+    YLCommentCell *cell = (YLCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    UIMenuController *menuC = [UIMenuController sharedMenuController];
+    
+    menuC.menuItems = @[
+                        [[UIMenuItem alloc]initWithTitle:@"顶" action:@selector(ding:)],
+                        [[UIMenuItem alloc]initWithTitle:@"回复" action:@selector(reply:)],
+                        [[UIMenuItem alloc]initWithTitle:@"举报" action:@selector(warning:)]
+                        ];
+    CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, 0);
+    
+    [menuC setTargetRect:rect inView:cell];
+
+
+    [menuC setMenuVisible:YES animated:YES];
+}
+//可以成为第一响应者
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+//允许显示的弹框内容
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    if (!self.isFirstResponder) {//文本框弹出键盘，文本框是第一响应者
+        
+        if (action == @selector(ding:)
+            ||action == @selector(reply:)
+            ||action == @selector(warning:)
+            ) {
+            return NO;
+        }
+        
+    }
+    return [super canPerformAction:action withSender:sender];
+}
+
+
+- (YLComment *)selectComment
+{
+
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    NSInteger row = indexPath.row;
+    NSArray *comments = self.latestComments;
+    if (indexPath.section == 0 && self.hotComments.count) {
+        comments = self.hotComments;
+    }
+    
+  return comments[row];
+
+}
+- (void)ding:(UIMenuController *)item
+{
+
+    
+    YLLog(@"顶 - %@ ：%@",self.selectComment.user.username,self.selectComment.content);
+}
+- (void)reply:(UIMenuController *)item
+{
+
+    YLLog(@"回复 - %@ : %@",self.selectComment.user.username,self.selectComment.content);
+    
+}
+- (void)warning:(UIMenuController *)item
+{
+    YLLog(@"举报 - %@ : %@",self.selectComment.user.username,self.selectComment.content);
 }
 @end

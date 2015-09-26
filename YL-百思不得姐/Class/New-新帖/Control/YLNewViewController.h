@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 www.xm.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "YLEssenceViewController.h"
 
-@interface YLNewViewController : UIViewController
+@interface YLNewViewController : YLEssenceViewController
 
 @end

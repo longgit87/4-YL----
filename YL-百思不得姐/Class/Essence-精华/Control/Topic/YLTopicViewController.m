@@ -15,6 +15,7 @@
 #import "YLTopic.h"
 #import "YLTopicCell.h"
 #import "YLCommentViewController.h"
+#import "YLNewViewController.h"
 
 @interface YLTopicViewController ()
 /**
@@ -29,6 +30,7 @@
  *  加载下一页的数据
  */
 @property (copy, nonatomic) NSString *maxtime;
+
 @end
 
 @implementation YLTopicViewController
@@ -80,6 +82,15 @@ static NSString *const ID = @"topicCell";
     
     
 }
+- (NSString *)aParameter
+{
+    if ([self.parentViewController isKindOfClass:[YLNewViewController class]]) {
+        return @"newlist";
+    }
+   
+return @"list";
+    
+}
 - (void)setupRefresh
 {
     //下拉刷新
@@ -103,13 +114,10 @@ static NSString *const ID = @"topicCell";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     // 请求参数
-    NSDictionary *parameters = @{
-                                 @"a":@"list",
-                                 @"c":@"data",
-                                 @"type":@(self.type)
-                                 
-                                 };
-    
+    NSMutableDictionary *parameters  = [NSMutableDictionary dictionary];
+    parameters[@"a"] = self.aParameter;
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @(self.type);
     YLWeadSelf;
     [self.manager GET:YLRequestUrl parameters:parameters success:^ void(NSURLSessionDataTask *tast, id responseObject) {
         //       YLWriteToPlist(responseObject, @"topics");
@@ -145,7 +153,7 @@ static NSString *const ID = @"topicCell";
     
     //请求参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    parameters[@"a"] = self.aParameter;//@"list";
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.type);
     parameters[@"maxtime"] = self.maxtime;
