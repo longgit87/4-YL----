@@ -8,6 +8,7 @@
 
 #import "YLFriendTrendsViewController.h"
 #import "YLLoginRegisterViewController.h"
+#import "YLRecommendFollowViewController.h"
 
 @interface YLFriendTrendsViewController ()
 
@@ -39,7 +40,7 @@
 - (void)friendClick
 {
 
-    UITableViewController *tvc = [[UITableViewController alloc]init];
+    YLRecommendFollowViewController *tvc = [[YLRecommendFollowViewController alloc]init];
     
     [self.navigationController pushViewController:tvc animated:YES];
 

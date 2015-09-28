@@ -76,10 +76,10 @@
 
     
     
-    //精华
-    [self setUpChileViewWithVc:[[YLEssenceViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectImage:@"tabBar_essence_click_icon"];
     //关注
     [self setUpChileViewWithVc:[[YLFriendTrendsViewController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selectImage:@"tabBar_friendTrends_click_icon"];
+    //精华
+    [self setUpChileViewWithVc:[[YLEssenceViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectImage:@"tabBar_essence_click_icon"];
     
     //新帖
     [self setUpChileViewWithVc:[[YLNewViewController alloc]init] title:@"新帖" image:@"tabBar_new_icon" selectImage:@"tabBar_new_click_icon"];

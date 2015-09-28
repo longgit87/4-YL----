@@ -16,6 +16,9 @@
 		8A4136CC1BA7B5820006AAA5 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CB1BA7B5820006AAA5 /* Foundation+Log.m */; };
 		8A4136D01BA7C4960006AAA5 /* YLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4136CE1BA7C4960006AAA5 /* YLTopicCell.m */; };
 		8A4136D11BA7C4960006AAA5 /* YLTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4136CF1BA7C4960006AAA5 /* YLTopicCell.xib */; };
+		8A48EF201BB6B83D007E1406 /* YLRecommendFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48EF1E1BB6B83D007E1406 /* YLRecommendFollowViewController.m */; };
+		8A48EF211BB6B83D007E1406 /* YLRecommendFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A48EF1F1BB6B83D007E1406 /* YLRecommendFollowViewController.xib */; };
+		8A48EF241BB6DB1F007E1406 /* YLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48EF231BB6DB1F007E1406 /* YLCategory.m */; };
 		8A50532C1B974D61006AC6AF /* YLFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A50532B1B974D61006AC6AF /* YLFriendTrendsViewController.xib */; };
 		8A5053301B9756D6006AC6AF /* YLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A50532E1B9756D6006AC6AF /* YLLoginRegisterViewController.m */; };
 		8A5053311B9756D6006AC6AF /* YLLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A50532F1B9756D6006AC6AF /* YLLoginRegisterViewController.xib */; };
@@ -29,6 +32,11 @@
 		8A7BC6701BA127E800C455C7 /* YLPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BC66F1BA127E800C455C7 /* YLPlaceholderTextView.m */; };
 		8A7BC6B31BA1AC1100C455C7 /* YLAddTagToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BC6B21BA1AC1100C455C7 /* YLAddTagToolBar.m */; };
 		8A7BC6B71BA1AC7E00C455C7 /* YLAddTagToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BC6B61BA1AC7E00C455C7 /* YLAddTagToolBar.xib */; };
+		8A82511A1BB77C2B009DEA34 /* YLCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8251181BB77C2B009DEA34 /* YLCategoryCell.m */; };
+		8A82511B1BB77C2B009DEA34 /* YLCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8251191BB77C2B009DEA34 /* YLCategoryCell.xib */; };
+		8A82511F1BB77DEC009DEA34 /* YLUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A82511D1BB77DEC009DEA34 /* YLUserCell.m */; };
+		8A8251201BB77DEC009DEA34 /* YLUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A82511E1BB77DEC009DEA34 /* YLUserCell.xib */; };
+		8A8251231BB7D192009DEA34 /* YLFollowUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8251221BB7D192009DEA34 /* YLFollowUser.m */; };
 		8A8A960D1BB12CE80088EB8C /* YLAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A95FA1BB12CE80088EB8C /* YLAllViewController.m */; };
 		8A8A960E1BB12CE80088EB8C /* YLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A95FC1BB12CE80088EB8C /* YLPictureViewController.m */; };
 		8A8A960F1BB12CE80088EB8C /* YLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8A95FE1BB12CE80088EB8C /* YLVideoViewController.m */; };
@@ -113,6 +121,11 @@
 		8A4136CD1BA7C4960006AAA5 /* YLTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTopicCell.h; sourceTree = "<group>"; };
 		8A4136CE1BA7C4960006AAA5 /* YLTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTopicCell.m; sourceTree = "<group>"; };
 		8A4136CF1BA7C4960006AAA5 /* YLTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLTopicCell.xib; sourceTree = "<group>"; };
+		8A48EF1D1BB6B83D007E1406 /* YLRecommendFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLRecommendFollowViewController.h; sourceTree = "<group>"; };
+		8A48EF1E1BB6B83D007E1406 /* YLRecommendFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLRecommendFollowViewController.m; sourceTree = "<group>"; };
+		8A48EF1F1BB6B83D007E1406 /* YLRecommendFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLRecommendFollowViewController.xib; sourceTree = "<group>"; };
+		8A48EF221BB6DB1F007E1406 /* YLCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCategory.h; sourceTree = "<group>"; };
+		8A48EF231BB6DB1F007E1406 /* YLCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCategory.m; sourceTree = "<group>"; };
 		8A50532B1B974D61006AC6AF /* YLFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		8A50532D1B9756D6006AC6AF /* YLLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLoginRegisterViewController.h; sourceTree = "<group>"; };
 		8A50532E1B9756D6006AC6AF /* YLLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLoginRegisterViewController.m; sourceTree = "<group>"; };
@@ -135,6 +148,14 @@
 		8A7BC6B11BA1AC1100C455C7 /* YLAddTagToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAddTagToolBar.h; sourceTree = "<group>"; };
 		8A7BC6B21BA1AC1100C455C7 /* YLAddTagToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAddTagToolBar.m; sourceTree = "<group>"; };
 		8A7BC6B61BA1AC7E00C455C7 /* YLAddTagToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLAddTagToolBar.xib; sourceTree = "<group>"; };
+		8A8251171BB77C2B009DEA34 /* YLCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLCategoryCell.h; sourceTree = "<group>"; };
+		8A8251181BB77C2B009DEA34 /* YLCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLCategoryCell.m; sourceTree = "<group>"; };
+		8A8251191BB77C2B009DEA34 /* YLCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLCategoryCell.xib; sourceTree = "<group>"; };
+		8A82511C1BB77DEC009DEA34 /* YLUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLUserCell.h; sourceTree = "<group>"; };
+		8A82511D1BB77DEC009DEA34 /* YLUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLUserCell.m; sourceTree = "<group>"; };
+		8A82511E1BB77DEC009DEA34 /* YLUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YLUserCell.xib; sourceTree = "<group>"; };
+		8A8251211BB7D192009DEA34 /* YLFollowUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLFollowUser.h; sourceTree = "<group>"; };
+		8A8251221BB7D192009DEA34 /* YLFollowUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLFollowUser.m; sourceTree = "<group>"; };
 		8A8A95F91BB12CE80088EB8C /* YLAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAllViewController.h; sourceTree = "<group>"; };
 		8A8A95FA1BB12CE80088EB8C /* YLAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAllViewController.m; sourceTree = "<group>"; };
 		8A8A95FB1BB12CE80088EB8C /* YLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLPictureViewController.h; sourceTree = "<group>"; };
@@ -509,6 +530,9 @@
 				8A50532D1B9756D6006AC6AF /* YLLoginRegisterViewController.h */,
 				8A50532E1B9756D6006AC6AF /* YLLoginRegisterViewController.m */,
 				8A50532F1B9756D6006AC6AF /* YLLoginRegisterViewController.xib */,
+				8A48EF1D1BB6B83D007E1406 /* YLRecommendFollowViewController.h */,
+				8A48EF1E1BB6B83D007E1406 /* YLRecommendFollowViewController.m */,
+				8A48EF1F1BB6B83D007E1406 /* YLRecommendFollowViewController.xib */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -516,6 +540,10 @@
 		8AB74FC71B96BA7200B5DAF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A48EF221BB6DB1F007E1406 /* YLCategory.h */,
+				8A48EF231BB6DB1F007E1406 /* YLCategory.m */,
+				8A8251211BB7D192009DEA34 /* YLFollowUser.h */,
+				8A8251221BB7D192009DEA34 /* YLFollowUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -527,6 +555,12 @@
 				8A5754FD1B9816E100F6F98D /* YLQuickLoginButton.m */,
 				8A5755021B984D9C00F6F98D /* YLLoginRegisterTextField.h */,
 				8A5755031B984D9C00F6F98D /* YLLoginRegisterTextField.m */,
+				8A8251171BB77C2B009DEA34 /* YLCategoryCell.h */,
+				8A8251181BB77C2B009DEA34 /* YLCategoryCell.m */,
+				8A8251191BB77C2B009DEA34 /* YLCategoryCell.xib */,
+				8A82511C1BB77DEC009DEA34 /* YLUserCell.h */,
+				8A82511D1BB77DEC009DEA34 /* YLUserCell.m */,
+				8A82511E1BB77DEC009DEA34 /* YLUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -773,8 +807,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A82511B1BB77C2B009DEA34 /* YLCategoryCell.xib in Resources */,
 				8A50532C1B974D61006AC6AF /* YLFriendTrendsViewController.xib in Resources */,
 				8A7BC6B71BA1AC7E00C455C7 /* YLAddTagToolBar.xib in Resources */,
+				8A8251201BB77DEC009DEA34 /* YLUserCell.xib in Resources */,
 				8A8A962D1BB16A530088EB8C /* YLTopicVioceView.xib in Resources */,
 				8A8A96161BB12CE80088EB8C /* YLSeeBigPictureViewController.xib in Resources */,
 				8A26FA881BADB60C00F19F7F /* YLCommentCell.xib in Resources */,
@@ -786,6 +822,7 @@
 				8A57553B1B997FC300F6F98D /* YLGuideView.xib in Resources */,
 				8AB74F801B9551F900B5DAF1 /* Images.xcassets in Resources */,
 				8A8A962B1BB16A530088EB8C /* YLTopicVideoView.xib in Resources */,
+				8A48EF211BB6B83D007E1406 /* YLRecommendFollowViewController.xib in Resources */,
 				8A8A96131BB12CE80088EB8C /* YLCommentViewController.xib in Resources */,
 				8ACDFE0C1B9C553800A4991F /* YLTagCell.xib in Resources */,
 			);
@@ -857,6 +894,8 @@
 				8ACDFE071B9C4B3800A4991F /* UIView+YLFrame.m in Sources */,
 				8ACDFE141B9C860C00A4991F /* YLConst.m in Sources */,
 				8A8A960F1BB12CE80088EB8C /* YLVideoViewController.m in Sources */,
+				8A8251231BB7D192009DEA34 /* YLFollowUser.m in Sources */,
+				8A82511A1BB77C2B009DEA34 /* YLCategoryCell.m in Sources */,
 				8ACDFE231B9DB6B100A4991F /* YLMeCell.m in Sources */,
 				8AB74FEE1B96BA7200B5DAF1 /* YLTabBar.m in Sources */,
 				8A8A961D1BB13DC50088EB8C /* YLCommentHeaderView.m in Sources */,
@@ -876,9 +915,11 @@
 				8A8A96141BB12CE80088EB8C /* YLEssenceViewController.m in Sources */,
 				8AE67D3D1BA3071000914E9F /* YLPublicViewController.m in Sources */,
 				8ACDFE491B9ED89700A4991F /* YLThirdCell.m in Sources */,
+				8A48EF241BB6DB1F007E1406 /* YLCategory.m in Sources */,
 				8AB74FEF1B96BA7200B5DAF1 /* YLTabBarController.m in Sources */,
 				8A8A962C1BB16A530088EB8C /* YLTopicVioceView.m in Sources */,
 				8AE67D3B1BA2ECF100914E9F /* YLAddTagViewController.m in Sources */,
+				8A82511F1BB77DEC009DEA34 /* YLUserCell.m in Sources */,
 				8A5755391B997FA900F6F98D /* YLGuideView.m in Sources */,
 				8ACDFE201B9D7C6F00A4991F /* NSString+YLEXT.m in Sources */,
 				8ACDFE0F1B9C612900A4991F /* YLTag.m in Sources */,
@@ -894,6 +935,7 @@
 				8AB74FF31B96BD0E00B5DAF1 /* YLNavigationControl.m in Sources */,
 				8A4136D01BA7C4960006AAA5 /* YLTopicCell.m in Sources */,
 				8AC8D1121BA3CDA500FB8698 /* YLTagButton.m in Sources */,
+				8A48EF201BB6B83D007E1406 /* YLRecommendFollowViewController.m in Sources */,
 				8A8A96281BB16A530088EB8C /* YLTopicPictureView.m in Sources */,
 				8A5754FE1B9816E100F6F98D /* YLQuickLoginButton.m in Sources */,
 				8AB74FEC1B96BA7200B5DAF1 /* AppDelegate.m in Sources */,

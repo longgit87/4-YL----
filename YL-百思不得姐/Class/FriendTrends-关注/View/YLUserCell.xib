@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="user" rowHeight="98" id="KGk-i7-Jjw" customClass="YLUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4NK-1O-zaz" userLabel="头像">
+                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="1vz-Kr-eIz"/>
+                            <constraint firstAttribute="height" constant="50" id="hHG-Jj-bjg"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMD-wz-qGE" userLabel="名称">
+                        <rect key="frame" x="65" y="10" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ4-I0-mYY" userLabel="关注人数">
+                        <rect key="frame" x="65" y="39" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b03-Jh-t8b">
+                        <rect key="frame" x="288" y="22" width="51" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="GYr-0q-BYb"/>
+                            <constraint firstAttribute="height" constant="25" id="yuI-KB-oyt"/>
+                        </constraints>
+                        <state key="normal" title="+ 关注" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="0.98823535439999999" green="0.0" blue="0.22352942819999999" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="b03-Jh-t8b" secondAttribute="trailing" constant="10" id="9Xd-mM-Jsu"/>
+                    <constraint firstItem="ZMD-wz-qGE" firstAttribute="leading" secondItem="4NK-1O-zaz" secondAttribute="trailing" constant="5" id="V4r-a6-TZy"/>
+                    <constraint firstItem="ZJ4-I0-mYY" firstAttribute="leading" secondItem="4NK-1O-zaz" secondAttribute="trailing" constant="5" id="ZgA-Aq-8mY"/>
+                    <constraint firstAttribute="centerY" secondItem="b03-Jh-t8b" secondAttribute="centerY" id="dIN-Sw-3G1"/>
+                    <constraint firstItem="4NK-1O-zaz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ngq-ef-Est"/>
+                    <constraint firstItem="4NK-1O-zaz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pu7-Ud-ake"/>
+                    <constraint firstItem="ZMD-wz-qGE" firstAttribute="top" secondItem="4NK-1O-zaz" secondAttribute="top" id="qPx-9a-4gW"/>
+                    <constraint firstItem="4NK-1O-zaz" firstAttribute="bottom" secondItem="ZJ4-I0-mYY" secondAttribute="bottom" id="sam-VR-FSI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fansCount_label" destination="ZJ4-I0-mYY" id="peL-hg-iOz"/>
+                <outlet property="header_imageView" destination="4NK-1O-zaz" id="DwK-yb-Q2Y"/>
+                <outlet property="screenName_label" destination="ZMD-wz-qGE" id="NmM-kf-wgv"/>
+            </connections>
+            <point key="canvasLocation" x="315.5" y="412"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+    </resources>
+</document>
