@@ -21,13 +21,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMD-wz-qGE" userLabel="名称">
-                        <rect key="frame" x="65" y="10" width="42" height="20.5"/>
+                        <rect key="frame" x="65" y="10" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ4-I0-mYY" userLabel="关注人数">
-                        <rect key="frame" x="65" y="39" width="42" height="20.5"/>
+                        <rect key="frame" x="65" y="39" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -43,15 +43,25 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
+                    <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="95n-1g-Y92">
+                        <rect key="frame" x="0.0" y="68" width="349" height="1"/>
+                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="4Nv-8G-iat"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="b03-Jh-t8b" secondAttribute="trailing" constant="10" id="9Xd-mM-Jsu"/>
                     <constraint firstItem="ZMD-wz-qGE" firstAttribute="leading" secondItem="4NK-1O-zaz" secondAttribute="trailing" constant="5" id="V4r-a6-TZy"/>
+                    <constraint firstAttribute="bottom" secondItem="95n-1g-Y92" secondAttribute="bottom" id="WRn-bI-AwI"/>
                     <constraint firstItem="ZJ4-I0-mYY" firstAttribute="leading" secondItem="4NK-1O-zaz" secondAttribute="trailing" constant="5" id="ZgA-Aq-8mY"/>
                     <constraint firstAttribute="centerY" secondItem="b03-Jh-t8b" secondAttribute="centerY" id="dIN-Sw-3G1"/>
+                    <constraint firstItem="95n-1g-Y92" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mBl-Vj-wmv"/>
                     <constraint firstItem="4NK-1O-zaz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ngq-ef-Est"/>
                     <constraint firstItem="4NK-1O-zaz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pu7-Ud-ake"/>
                     <constraint firstItem="ZMD-wz-qGE" firstAttribute="top" secondItem="4NK-1O-zaz" secondAttribute="top" id="qPx-9a-4gW"/>
+                    <constraint firstAttribute="trailing" secondItem="95n-1g-Y92" secondAttribute="trailing" id="sK9-00-C7x"/>
                     <constraint firstItem="4NK-1O-zaz" firstAttribute="bottom" secondItem="ZJ4-I0-mYY" secondAttribute="bottom" id="sam-VR-FSI"/>
                 </constraints>
             </tableViewCellContentView>

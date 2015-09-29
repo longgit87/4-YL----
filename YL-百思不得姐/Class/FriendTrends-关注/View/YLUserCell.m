@@ -31,7 +31,7 @@
 - (void)setFollowUser:(YLFollowUser *)followUser
 {
     _followUser = followUser;
-    YLLog(@"%@",followUser.screen_name);
+
     
     [self.header_imageView setHeaderIcon:followUser.header];
     
@@ -48,4 +48,5 @@
     
 
 }
+
 @end
